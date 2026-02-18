@@ -77,6 +77,7 @@
             this.btnOptions.Text = "Options";
             this.btnOptions.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnOptions.UseVisualStyleBackColor = false;
+            this.btnOptions.Click += new System.EventHandler(this.btnOptions_Click);
             // 
             // btnReporting
             // 
@@ -95,6 +96,7 @@
             this.btnReporting.Text = "Reporting";
             this.btnReporting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReporting.UseVisualStyleBackColor = false;
+            this.btnReporting.Click += new System.EventHandler(this.btnReporting_Click);
             // 
             // btnSetup
             // 
@@ -113,6 +115,7 @@
             this.btnSetup.Text = "Setup";
             this.btnSetup.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSetup.UseVisualStyleBackColor = false;
+            this.btnSetup.Click += new System.EventHandler(this.btnSetup_Click);
             // 
             // btnPOS
             // 
@@ -131,6 +134,7 @@
             this.btnPOS.Text = "Point Of Sale";
             this.btnPOS.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPOS.UseVisualStyleBackColor = false;
+            this.btnPOS.Click += new System.EventHandler(this.btnPOS_Click);
             // 
             // MainForm
             // 
@@ -141,6 +145,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "MainForm";
             this.Text = "Main SmartPOS";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.pnMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
