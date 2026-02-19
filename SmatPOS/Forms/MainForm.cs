@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SmatPOS.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +14,8 @@ namespace SmatPOS
     public partial class MainForm: Form
     {
         private Button CurrentButton;
-        private int TempIndex;  
+        private Form ActiveForm;
+
         public MainForm()
         {
             InitializeComponent();
@@ -22,6 +24,22 @@ namespace SmatPOS
         private void MainForm_Load(object sender, EventArgs e)
         {
             lblTime.Text = DateTime.Now.ToString();
+            this.ControlBox = false;
+            this.Text = string.Empty;
+        }
+        private void OpenChildForm(Form childForm, object btnSender)
+        {
+            if (ActiveForm != null)
+                ActiveForm.Close();
+            ActivateButton(btnSender);
+            ActiveForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.pnlMainForm.Controls.Add(childForm);
+         //   this.pnlMainForm.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
         private Color SelectTheme()
         {
@@ -63,6 +81,7 @@ namespace SmatPOS
                     CurrentButton.ForeColor = Color.White;
                     CurrentButton.Font = new Font("Tohoma", 11F, FontStyle.Bold);
                     pnlTitle.BackColor = color; 
+                    lblTitle.Text = CurrentButton.Text; 
                 }
             }
         }
@@ -81,27 +100,32 @@ namespace SmatPOS
 
         private void btnPOS_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new MainPointOfSale(),sender);
         }
 
         private void btnSetup_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new MainSetup(), sender);
         }
 
         private void btnReporting_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new MainReportes(), sender);
         }
 
         private void btnOptions_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new MainOptions(), sender);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblTime.Text = DateTime.Now.ToString();
+        }
+
+        private void pnlMainForm_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
