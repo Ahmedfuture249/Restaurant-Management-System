@@ -21,7 +21,7 @@ namespace SmatPOS
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-
+            lblTime.Text = DateTime.Now.ToString();
         }
         private Color SelectTheme()
         {
@@ -54,18 +54,21 @@ namespace SmatPOS
                 if (CurrentButton != (Button)sender)
                 {
 
-                    CurrentButton = (Button)sender;
+                   
                     UnSelectButton();
+                   
+                    CurrentButton = (Button)sender;
                     Color color = SelectTheme();
                     CurrentButton.BackColor = color;
                     CurrentButton.ForeColor = Color.White;
                     CurrentButton.Font = new Font("Tohoma", 11F, FontStyle.Bold);
+                    pnlTitle.BackColor = color; 
                 }
             }
         }
         private void UnSelectButton()
         {
-            foreach (Control previousBtn in pnlogo.Controls)
+            foreach (Control previousBtn in pnMenu.Controls)
             {
                 if (previousBtn.GetType() == typeof(Button))
                 {
@@ -94,6 +97,11 @@ namespace SmatPOS
         private void btnOptions_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text = DateTime.Now.ToString();
         }
     }
 }
