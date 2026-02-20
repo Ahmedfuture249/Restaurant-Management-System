@@ -10,6 +10,7 @@ namespace SmatPOS
      public class adoClass
     {
         public static SqlConnection sqlcon;
+        public static SqlCommandBuilder Builder;
         public static void SetConnection()
         {
             sqlcon = new SqlConnection(SmatPOS.Properties.Settings.Default.connection);
