@@ -52,6 +52,7 @@ namespace SmatPOS.Forms
                         txtPrinter.Text = dt.Rows[i]["PrinterName"].ToString();
                         txtReceiptLine1.Text = dt.Rows[i]["ReceiptLine1"].ToString();
                         txtReceiptLine2.Text = dt.Rows[i]["ReceiptLine2"].ToString();
+                        pbLogo.BackgroundImage = clsHelper.ByteToImage(dt.Rows[i]["Logo"]);
 
 
                     }
@@ -126,7 +127,22 @@ namespace SmatPOS.Forms
             Row["PrinterName"] = txtPrinter.Text;
             Row["ReceiptLine1"] = txtReceiptLine1.Text;
             Row["ReceiptLine2"] = txtReceiptLine2.Text;
+            if (pbLogo.BackgroundImage!=null)
+            {
+                Row["Logo"]=clsHelper.ImageToByte(pbLogo.BackgroundImage);
+            }
 
+        }
+
+        private void btnChoseLogo_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Images|* .png";
+            if(openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                txtLogoPath.Text = openFileDialog.FileName;
+                pbLogo.BackgroundImage = new Bitmap(txtLogoPath.Text);
+            }
         }
     }
 }

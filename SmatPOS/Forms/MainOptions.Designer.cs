@@ -198,6 +198,7 @@
             this.btnChoseLogo.TabIndex = 24;
             this.btnChoseLogo.Text = "....";
             this.btnChoseLogo.UseVisualStyleBackColor = true;
+            this.btnChoseLogo.Click += new System.EventHandler(this.btnChoseLogo_Click);
             // 
             // btnSave
             // 
@@ -217,6 +218,7 @@
             // 
             // pbLogo
             // 
+            this.pbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pbLogo.Location = new System.Drawing.Point(181, 296);
             this.pbLogo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbLogo.Name = "pbLogo";
