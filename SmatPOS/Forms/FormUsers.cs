@@ -176,5 +176,22 @@ namespace SmatPOS.Forms
         {
             LoadDataOfIndex(dataTable.Rows.Count - 1);
         }
+
+        private void toolStripBtnSelect_Click(object sender, EventArgs e)
+        {
+            FormSelect select=new FormSelect("select ID,FullName FROM USERS");
+            select.des = "FullName";
+            if (select.ShowDialog() == DialogResult.OK)
+            {
+                LoadData(int.Parse(select.des));
+            }
+
+
+        }
+
+        private void toolStripBtnExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
