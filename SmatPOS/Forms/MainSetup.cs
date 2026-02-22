@@ -19,7 +19,8 @@ namespace SmatPOS.Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            FormUsers form= new FormUsers();    
+            form.ShowDialog();
         }
 
         private void btnExit_Click(object sender, EventArgs e)

@@ -124,6 +124,7 @@
             this.toolStripBtnLast.Size = new System.Drawing.Size(50, 70);
             this.toolStripBtnLast.Text = "Last";
             this.toolStripBtnLast.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripBtnLast.Click += new System.EventHandler(this.toolStripBtnLast_Click);
             // 
             // toolStripBtnNext
             // 
@@ -133,6 +134,7 @@
             this.toolStripBtnNext.Size = new System.Drawing.Size(50, 70);
             this.toolStripBtnNext.Text = "Next";
             this.toolStripBtnNext.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripBtnNext.Click += new System.EventHandler(this.toolStripBtnNext_Click);
             // 
             // toolStripBtnBack
             // 
@@ -142,6 +144,7 @@
             this.toolStripBtnBack.Size = new System.Drawing.Size(50, 70);
             this.toolStripBtnBack.Text = "Back";
             this.toolStripBtnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripBtnBack.Click += new System.EventHandler(this.toolStripBtnBack_Click);
             // 
             // toolStripBtnFirst
             // 
@@ -151,6 +154,7 @@
             this.toolStripBtnFirst.Size = new System.Drawing.Size(50, 70);
             this.toolStripBtnFirst.Text = "First";
             this.toolStripBtnFirst.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripBtnFirst.Click += new System.EventHandler(this.toolStripBtnFirst_Click);
             // 
             // toolStripSeparator3
             // 

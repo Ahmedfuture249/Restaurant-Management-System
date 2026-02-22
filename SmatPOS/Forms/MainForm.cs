@@ -26,6 +26,7 @@ namespace SmatPOS
             lblTime.Text = DateTime.Now.ToString();
             this.ControlBox = false;
             this.Text = string.Empty;
+            adoClass.SetConnection();
         }
         private void OpenChildForm(Form childForm, object btnSender)
         {

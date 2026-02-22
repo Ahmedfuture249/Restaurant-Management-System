@@ -21,14 +21,32 @@ namespace SmatPOS.Forms
         private SqlDataAdapter adapter;
         private DataTable dataTable;
         private DataRow row;
+        private int Index;
 
         private void FormUsers_Load(object sender, EventArgs e)
         {
-            adapter = new SqlDataAdapter("Select top 1 from Users", adoClass.sqlcon);
+            adapter = new SqlDataAdapter("Select  * from Users", adoClass.sqlcon);
             dataTable = new DataTable();
+            adapter.Fill(dataTable);
+            Index = 0;  
             LoadData(0);
         }
 
+        private void LoadDataOfIndex(int _Index)
+
+        {
+            Index = _Index;
+            if (dataTable.Rows.Count > 0 && _Index >= 0 && _Index <= dataTable.Rows.Count - 1)
+            {
+                row = dataTable.Rows[_Index];
+                txtEmail.Text = dataTable.Rows[_Index]["Email"].ToString();
+                txtFullName.Text = dataTable.Rows[_Index]["FullName"].ToString();
+                txtJopDes.Text = dataTable.Rows[_Index]["jobDES"].ToString();
+                txtPassword.Text = dataTable.Rows[_Index]["Password"].ToString();
+                txtPhone.Text = dataTable.Rows[_Index]["Phone"].ToString();
+                txtUserName.Text = dataTable.Rows[_Index]["UserName"].ToString();
+            }
+        }
         private void label3_Click(object sender, EventArgs e)
         {
                
@@ -129,6 +147,34 @@ namespace SmatPOS.Forms
             row["Phone"]=txtPhone.Text;
             row["Email"] = txtEmail.Text; 
             row["jobDes"]=txtJopDes.Text; 
+        }
+
+        private void toolStripBtnFirst_Click(object sender, EventArgs e)
+        {
+            LoadDataOfIndex(0);
+        }
+
+        private void toolStripBtnBack_Click(object sender, EventArgs e)
+        {
+            if (Index > 0)
+            {
+                Index--;
+                LoadDataOfIndex(Index);
+            }
+        }
+
+        private void toolStripBtnNext_Click(object sender, EventArgs e)
+        {
+            if (Index < dataTable.Rows.Count-1)
+            {
+                Index++;
+                LoadDataOfIndex(Index);
+            }
+        }
+
+        private void toolStripBtnLast_Click(object sender, EventArgs e)
+        {
+            LoadDataOfIndex(dataTable.Rows.Count - 1);
         }
     }
 }
