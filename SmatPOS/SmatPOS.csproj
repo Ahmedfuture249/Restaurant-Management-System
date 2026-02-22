@@ -215,6 +215,12 @@
   <ItemGroup>
     <Compile Include="adoClass.cs" />
     <Compile Include="clsHelper.cs" />
+    <Compile Include="Forms\FormUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormUsers.Designer.cs">
+      <DependentUpon>FormUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -247,6 +253,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FormUsers.resx">
+      <DependentUpon>FormUsers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>

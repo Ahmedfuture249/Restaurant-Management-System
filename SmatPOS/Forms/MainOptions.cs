@@ -52,7 +52,11 @@ namespace SmatPOS.Forms
                         txtPrinter.Text = dt.Rows[i]["PrinterName"].ToString();
                         txtReceiptLine1.Text = dt.Rows[i]["ReceiptLine1"].ToString();
                         txtReceiptLine2.Text = dt.Rows[i]["ReceiptLine2"].ToString();
-                        pbLogo.BackgroundImage = clsHelper.ByteToImage(dt.Rows[i]["Logo"]);
+                        if (dt.Rows[i]["Logo"] != null)
+                        {
+                            pbLogo.BackgroundImage = clsHelper.ByteToImage(dt.Rows[i]["Logo"]);
+                        }
+                        
 
 
                     }
