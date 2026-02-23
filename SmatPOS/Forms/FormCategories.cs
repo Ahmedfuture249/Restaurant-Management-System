@@ -11,27 +11,25 @@ using System.Windows.Forms;
 
 namespace SmatPOS.Forms
 {
-    public partial class FormUsers: Form
+    public partial class FormCategories: Form
     {
-        
-        public FormUsers()
-        {
-            InitializeComponent();
-        }
         private SqlDataAdapter adapter;
         private DataTable dataTable;
         private DataRow row;
         private int Index;
-
-        private void FormUsers_Load(object sender, EventArgs e)
+        public FormCategories()
         {
-            adapter = new SqlDataAdapter("Select  * from Users", adoClass.sqlcon);
-            dataTable = new DataTable();
-            adapter.Fill(dataTable);
-            Index = 0;  
-            LoadData(0);
+            InitializeComponent();
         }
 
+        private void FormCategories_Load(object sender, EventArgs e)
+        {
+            adapter = new SqlDataAdapter("Select  * from categories", adoClass.sqlcon);
+            dataTable = new DataTable();
+            adapter.Fill(dataTable);
+            Index = 0;
+            LoadData(0);
+        }
         private void LoadDataOfIndex(int _Index)
 
         {
@@ -39,17 +37,13 @@ namespace SmatPOS.Forms
             if (dataTable.Rows.Count > 0 && _Index >= 0 && _Index <= dataTable.Rows.Count - 1)
             {
                 row = dataTable.Rows[_Index];
-                txtEmail.Text = dataTable.Rows[_Index]["Email"].ToString();
-                txtFullName.Text = dataTable.Rows[_Index]["FullName"].ToString();
-                txtJopDes.Text = dataTable.Rows[_Index]["jobDES"].ToString();
-                txtPassword.Text = dataTable.Rows[_Index]["Password"].ToString();
-                txtPhone.Text = dataTable.Rows[_Index]["Phone"].ToString();
-                txtUserName.Text = dataTable.Rows[_Index]["UserName"].ToString();
+                txtDes.Text = dataTable.Rows[_Index]["Description"].ToString();
+             
             }
         }
         private void label3_Click(object sender, EventArgs e)
         {
-               
+
         }
         private void LoadData(int ID)
         {
@@ -60,61 +54,30 @@ namespace SmatPOS.Forms
             }
             else
             {
-                dataRows=dataTable.Select("ID = '"+ID+"'");
+                dataRows = dataTable.Select("ID = '" + ID + "'");
             }
             if (dataRows.Length > 0)
             {
-                row= dataRows[0];
-                txtEmail.Text = dataRows[0]["Email"].ToString();
-                txtFullName.Text = dataRows[0]["FullName"].ToString();
-                txtJopDes.Text = dataRows[0]["jobDES"].ToString();
-                txtPassword.Text = dataRows[0]["Password"].ToString();
-                txtPhone.Text = dataRows[0]["Phone"].ToString();
-                txtUserName.Text = dataRows[0]["UserName"].ToString();
+                row = dataRows[0];
+                txtDes.Text = row["Description"].ToString();
+               
             }
 
         }
-
-        private void toolStripBtnNew_Click(object sender, EventArgs e)
+        private void DataFillRow()
         {
-            row = null;
-            foreach (Control control in this.Controls)
-            {
-                if (control is TextBox)
-                {
-                    control.Text = string.Empty;
-                }
-            }
-        }
-
-        private void toolStripBtnSve_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Save New Data", "?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                SaveData();
-                return;
-            }
+            row["Description"] = txtDes.Text;
+           
         }
         private void SaveData()
         {
-            if (txtUserName.Text == string.Empty)
+            if (txtDes.Text == string.Empty)
             {
-                MessageBox.Show("Please Enter User Name ");
-                txtUserName.Focus();
+                MessageBox.Show("Please Enter Desctiption ");
+                txtDes.Focus();
                 return;
             }
-            if (txtPassword.Text == string.Empty)
-            {
-                MessageBox.Show("Please Enter  your Password ");
-                txtPassword.Focus();
-                return;
-            }
-            if (txtFullName.Text == string.Empty)
-            {
-                MessageBox.Show("Please Enter Full Name ");
-                txtFullName.Focus();
-                return;
-            }
+         
             if (row == null)
             {
                 row = dataTable.NewRow();
@@ -139,14 +102,28 @@ namespace SmatPOS.Forms
                 MessageBox.Show(ex.Message);
             }
         }
-        private void DataFillRow()
+
+        private void toolStripBtnNew_Click(object sender, EventArgs e)
         {
-            row["UserName"]=txtUserName.Text;
-            row["Password"]=txtPassword.Text;
-            row["FullName"] = txtFullName.Text; 
-            row["Phone"]=txtPhone.Text;
-            row["Email"] = txtEmail.Text; 
-            row["jobDes"]=txtJopDes.Text; 
+            row = null;
+            foreach (Control control in this.Controls)
+            {
+                if (control is TextBox)
+                {
+                    control.Text = string.Empty;
+                }
+            }
+            txtDes.Focus();
+        }
+
+        private void toolStripBtnSve_Click(object sender, EventArgs e)
+        {
+
+            if (MessageBox.Show("Save New Data", "?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                SaveData();
+                return;
+            }
         }
 
         private void toolStripBtnFirst_Click(object sender, EventArgs e)
@@ -165,7 +142,7 @@ namespace SmatPOS.Forms
 
         private void toolStripBtnNext_Click(object sender, EventArgs e)
         {
-            if (Index < dataTable.Rows.Count-1)
+            if (Index < dataTable.Rows.Count - 1)
             {
                 Index++;
                 LoadDataOfIndex(Index);
@@ -179,13 +156,12 @@ namespace SmatPOS.Forms
 
         private void toolStripBtnSelect_Click(object sender, EventArgs e)
         {
-            FormSelect select=new FormSelect("select ID,FullName FROM USERS");
-            select.des = "FullName";
+            FormSelect select = new FormSelect("select ID,Description FROM categories");
+            select.des = "Description";
             if (select.ShowDialog() == DialogResult.OK)
             {
                 LoadData(int.Parse(select.result));
             }
-
 
         }
 

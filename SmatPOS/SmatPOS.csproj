@@ -215,6 +215,12 @@
   <ItemGroup>
     <Compile Include="adoClass.cs" />
     <Compile Include="clsHelper.cs" />
+    <Compile Include="Forms\FormCategories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormCategories.Designer.cs">
+      <DependentUpon>FormCategories.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormSelect.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,6 +265,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FormCategories.resx">
+      <DependentUpon>FormCategories.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormSelect.resx">
       <DependentUpon>FormSelect.cs</DependentUpon>
     </EmbeddedResource>

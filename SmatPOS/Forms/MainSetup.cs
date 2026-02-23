@@ -27,5 +27,11 @@ namespace SmatPOS.Forms
         {
             Close();
         }
+
+        private void btnCategories_Click(object sender, EventArgs e)
+        {
+            FormCategories form= new FormCategories();  
+            form.ShowDialog();
+        }
     }
 }

@@ -62,6 +62,7 @@
             this.btnCategories.Text = "Categories";
             this.btnCategories.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCategories.UseVisualStyleBackColor = true;
+            this.btnCategories.Click += new System.EventHandler(this.btnCategories_Click);
             // 
             // btnUsers
             // 
