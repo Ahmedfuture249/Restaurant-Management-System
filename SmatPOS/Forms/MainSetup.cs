@@ -39,5 +39,12 @@ namespace SmatPOS.Forms
             FormItems formItems= new FormItems();   
             formItems.ShowDialog();
         }
+
+        private void btnPayments_Click(object sender, EventArgs e)
+        {
+            FormPayments form= new FormPayments();
+            form.ShowDialog();
+
+        }
     }
 }

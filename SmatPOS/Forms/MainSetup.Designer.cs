@@ -90,6 +90,7 @@
             this.btnPayments.Text = "Payments ";
             this.btnPayments.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPayments.UseVisualStyleBackColor = true;
+            this.btnPayments.Click += new System.EventHandler(this.btnPayments_Click);
             // 
             // btnItems
             // 

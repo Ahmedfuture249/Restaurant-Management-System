@@ -216,6 +216,12 @@
     <Compile Include="adoClass.cs" />
     <Compile Include="clsHelper.cs" />
     <Compile Include="comboitem.cs" />
+    <Compile Include="FormPayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPayments.Designer.cs">
+      <DependentUpon>FormPayments.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormCategories.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -272,6 +278,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormPayments.resx">
+      <DependentUpon>FormPayments.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormCategories.resx">
       <DependentUpon>FormCategories.cs</DependentUpon>
     </EmbeddedResource>

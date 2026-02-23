@@ -1,6 +1,6 @@
-﻿namespace SmatPOS.Forms
+﻿namespace SmatPOS
 {
-    partial class FormCategories
+    partial class FormPayments
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCategories));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPayments));
+            this.txtDes = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.txtDes = new System.Windows.Forms.TextBox();
-            this.lblDes = new System.Windows.Forms.Label();
             this.toolStripBtnSelect = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnNew = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnSve = new System.Windows.Forms.ToolStripButton();
@@ -43,8 +42,16 @@
             this.toolStripBtnNext = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnLast = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnExit = new System.Windows.Forms.ToolStripButton();
+            this.lblDes = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // txtDes
+            // 
+            this.txtDes.Location = new System.Drawing.Point(359, 154);
+            this.txtDes.Name = "txtDes";
+            this.txtDes.Size = new System.Drawing.Size(246, 22);
+            this.txtDes.TabIndex = 5;
             // 
             // toolStrip1
             // 
@@ -63,8 +70,8 @@
             this.toolStripSeparator3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(876, 73);
-            this.toolStrip1.TabIndex = 1;
+            this.toolStrip1.Size = new System.Drawing.Size(800, 73);
+            this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripSeparator1
@@ -81,23 +88,6 @@
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 73);
-            // 
-            // txtDes
-            // 
-            this.txtDes.Location = new System.Drawing.Point(405, 136);
-            this.txtDes.Name = "txtDes";
-            this.txtDes.Size = new System.Drawing.Size(246, 22);
-            this.txtDes.TabIndex = 3;
-            // 
-            // lblDes
-            // 
-            this.lblDes.AutoSize = true;
-            this.lblDes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDes.Location = new System.Drawing.Point(275, 134);
-            this.lblDes.Name = "lblDes";
-            this.lblDes.Size = new System.Drawing.Size(111, 22);
-            this.lblDes.TabIndex = 2;
-            this.lblDes.Text = "Description";
             // 
             // toolStripBtnSelect
             // 
@@ -180,20 +170,30 @@
             this.toolStripBtnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripBtnExit.Click += new System.EventHandler(this.toolStripBtnExit_Click);
             // 
-            // FormCategories
+            // lblDes
+            // 
+            this.lblDes.AutoSize = true;
+            this.lblDes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDes.Location = new System.Drawing.Point(222, 154);
+            this.lblDes.Name = "lblDes";
+            this.lblDes.Size = new System.Drawing.Size(111, 22);
+            this.lblDes.TabIndex = 6;
+            this.lblDes.Text = "Description";
+            // 
+            // FormPayments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(876, 256);
-            this.Controls.Add(this.txtDes);
+            this.ClientSize = new System.Drawing.Size(800, 241);
             this.Controls.Add(this.lblDes);
+            this.Controls.Add(this.txtDes);
             this.Controls.Add(this.toolStrip1);
-            this.Name = "FormCategories";
+            this.Name = "FormPayments";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormCategories";
-            this.Load += new System.EventHandler(this.FormCategories_Load);
+            this.Text = "FormPayments";
+            this.Load += new System.EventHandler(this.FormPayments_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -203,6 +203,7 @@
 
         #endregion
 
+        private System.Windows.Forms.TextBox txtDes;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripBtnSelect;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
@@ -215,7 +216,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton toolStripBtnExit;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.TextBox txtDes;
         private System.Windows.Forms.Label lblDes;
     }
 }
