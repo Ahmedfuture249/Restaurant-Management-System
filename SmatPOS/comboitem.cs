@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace SmatPOS
 {
-    class comboItem
+    public class comboItem
     {
+        public comboItem(string _id, string _DES)
+        {
+            Id = _id;
+            DES = _DES;
+        }
+
+        public string Id { get; set; }
+        public string DES { get; set; }
+
+        public override string ToString()
+        {
+            return DES;
+        }
     }
 }

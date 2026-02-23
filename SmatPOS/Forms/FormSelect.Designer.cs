@@ -99,6 +99,7 @@
             this.Controls.Add(this.txtDes);
             this.Controls.Add(this.lblDes);
             this.Name = "FormSelect";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormSelect";
             this.Load += new System.EventHandler(this.FormSelect_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -30,7 +30,7 @@ namespace SmatPOS.Forms
         }
         private void loadselect()
         {
-
+            dataTable.DefaultView.Sort = "ID";
             DataRow[] rows = dataTable.Select($"{des} LIKE '%{txtDes.Text}%'");
 
         

@@ -103,6 +103,7 @@
             this.btnItems.Text = "Items";
             this.btnItems.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnItems.UseVisualStyleBackColor = true;
+            this.btnItems.Click += new System.EventHandler(this.btnItems_Click);
             // 
             // MainSetup
             // 
