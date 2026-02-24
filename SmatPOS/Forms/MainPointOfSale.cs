@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SmatPOS.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,12 @@ namespace SmatPOS
         private void btnExit_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnPOS_Click(object sender, EventArgs e)
+        {
+            POSForm frm= new POSForm();
+            frm.ShowDialog();
         }
     }
 }

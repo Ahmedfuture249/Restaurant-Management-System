@@ -28,22 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnPOS = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnPOS = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btnPOS
-            // 
-            this.btnPOS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPOS.Image = global::SmatPOS.Properties.Resources.cashier_machine;
-            this.btnPOS.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnPOS.Location = new System.Drawing.Point(12, 23);
-            this.btnPOS.Name = "btnPOS";
-            this.btnPOS.Size = new System.Drawing.Size(179, 115);
-            this.btnPOS.TabIndex = 0;
-            this.btnPOS.Text = "Point  Of Sale";
-            this.btnPOS.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnPOS.UseVisualStyleBackColor = true;
             // 
             // btnExit
             // 
@@ -59,6 +46,20 @@
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnPOS
+            // 
+            this.btnPOS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPOS.Image = global::SmatPOS.Properties.Resources.cashier_machine;
+            this.btnPOS.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnPOS.Location = new System.Drawing.Point(12, 23);
+            this.btnPOS.Name = "btnPOS";
+            this.btnPOS.Size = new System.Drawing.Size(179, 115);
+            this.btnPOS.TabIndex = 0;
+            this.btnPOS.Text = "Point  Of Sale";
+            this.btnPOS.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPOS.UseVisualStyleBackColor = true;
+            this.btnPOS.Click += new System.EventHandler(this.btnPOS_Click);
             // 
             // MainPointOfSale
             // 
