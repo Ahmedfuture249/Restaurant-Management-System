@@ -84,9 +84,10 @@
             // 
             // txtDes
             // 
+            this.txtDes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDes.Location = new System.Drawing.Point(405, 136);
             this.txtDes.Name = "txtDes";
-            this.txtDes.Size = new System.Drawing.Size(246, 22);
+            this.txtDes.Size = new System.Drawing.Size(246, 30);
             this.txtDes.TabIndex = 3;
             // 
             // lblDes

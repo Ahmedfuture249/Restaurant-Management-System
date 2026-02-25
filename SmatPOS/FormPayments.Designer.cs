@@ -34,6 +34,7 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.lblDes = new System.Windows.Forms.Label();
             this.toolStripBtnSelect = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnNew = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnSve = new System.Windows.Forms.ToolStripButton();
@@ -42,15 +43,15 @@
             this.toolStripBtnNext = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnLast = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnExit = new System.Windows.Forms.ToolStripButton();
-            this.lblDes = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtDes
             // 
-            this.txtDes.Location = new System.Drawing.Point(359, 154);
+            this.txtDes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDes.Location = new System.Drawing.Point(357, 150);
             this.txtDes.Name = "txtDes";
-            this.txtDes.Size = new System.Drawing.Size(246, 22);
+            this.txtDes.Size = new System.Drawing.Size(246, 30);
             this.txtDes.TabIndex = 5;
             // 
             // toolStrip1
@@ -88,6 +89,16 @@
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 73);
+            // 
+            // lblDes
+            // 
+            this.lblDes.AutoSize = true;
+            this.lblDes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDes.Location = new System.Drawing.Point(222, 154);
+            this.lblDes.Name = "lblDes";
+            this.lblDes.Size = new System.Drawing.Size(111, 22);
+            this.lblDes.TabIndex = 6;
+            this.lblDes.Text = "Description";
             // 
             // toolStripBtnSelect
             // 
@@ -169,16 +180,6 @@
             this.toolStripBtnExit.Text = "Exit";
             this.toolStripBtnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripBtnExit.Click += new System.EventHandler(this.toolStripBtnExit_Click);
-            // 
-            // lblDes
-            // 
-            this.lblDes.AutoSize = true;
-            this.lblDes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDes.Location = new System.Drawing.Point(222, 154);
-            this.lblDes.Name = "lblDes";
-            this.lblDes.Size = new System.Drawing.Size(111, 22);
-            this.lblDes.TabIndex = 6;
-            this.lblDes.Text = "Description";
             // 
             // FormPayments
             // 

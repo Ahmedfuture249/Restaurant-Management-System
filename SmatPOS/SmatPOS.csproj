@@ -216,6 +216,7 @@
     <Compile Include="adoClass.cs" />
     <Compile Include="clsHelper.cs" />
     <Compile Include="comboitem.cs" />
+    <Compile Include="declarations.cs" />
     <Compile Include="FormPayments.cs">
       <SubType>Form</SubType>
     </Compile>
