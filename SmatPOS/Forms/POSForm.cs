@@ -42,6 +42,7 @@ namespace SmatPOS.Forms
         private void POSForm_Load(object sender, EventArgs e)
         {
             clsHelper.fillComboBox(comboBox1, "select * from Payments");
+            comboBox1.Text=clsHelper.getComboItemVal(comboBox1, "1");   
             FillCategories();
             button0.Click += num_Click;
             button1.Click += num_Click;
@@ -109,22 +110,22 @@ namespace SmatPOS.Forms
                 double x = 0;
                 double.TryParse(txtItemQTY.Text, out x);
                 double totalPrice = 0;
-                double.TryParse(button.Tag.ToString(), out totalPrice);
-                totalPrice = x * totalPrice;
-                if (totalPrice == 0)
-                {
-                    totalPrice = double.Parse(button.Tag.ToString());
-                }
+                double ItemPrice = 0;
+                double.TryParse(button.Tag.ToString(), out ItemPrice);
+              
                 if (x == 0)
                 {
                     x = 1;
                 }
+                totalPrice = x * ItemPrice;
                 dgvItems.Rows.Add(new object[]
                 {
                     button.AccessibleDescription,
                     button.Text,
                     x,
+                   
                     totalPrice
+                    ,ItemPrice
                 }
                     );
                 txtItemQTY.Text = "0";
@@ -268,7 +269,7 @@ namespace SmatPOS.Forms
                 sqlCommand.Parameters["@userID"].Value = declarations.UserID;
                 sqlCommand.Parameters["@TotalCheck"].Value= double.Parse(txtTotal.Text);
                 sqlCommand.Parameters["@Status"].Value = "Close"    ;
-                sqlCommand.Parameters["@CheckID"].Value  = ParameterDirection.Output;
+                sqlCommand.Parameters["@CheckID"].Direction  = ParameterDirection.Output;
                  if(adoClass.sqlcon.State!=ConnectionState.Open)
                 {
                     adoClass.sqlcon.Open(); 
@@ -276,6 +277,7 @@ namespace SmatPOS.Forms
                 sqlCommand.ExecuteNonQuery();   
                 string checkID = sqlCommand.Parameters["@CheckID"].Value.ToString();
                 SaveDataItems(checkID);
+                SaveDataIPayments(checkID);
             }
             catch (Exception ex)
             {
@@ -286,11 +288,64 @@ namespace SmatPOS.Forms
         }
         private void SaveDataItems(string checkID)
         {
+             adapter = new SqlDataAdapter("select * from checksItems", adoClass.sqlcon);
+             _ItemDt = new DataTable();
+            {
+                try
+                {
 
+                    adapter.Fill(_ItemDt);
+                    for (int i = 0; i <= dgvItems.Rows.Count - 1; i++)
+                    {
+                        DataRow row = _ItemDt.NewRow();
+                        row["checkID"] = int.Parse(checkID);
+                        row["ItemID"] = dgvItems[ColID.Index, i].Value;
+                        row["Quantity"] = dgvItems[colQTY.Index, i].Value;
+                        row["Price"] = dgvItems[ColPrice.Index, i].Value;
+                        row["totalprice"] = dgvItems[colItemprice.Index, i].Value;
+                        _ItemDt.Rows.Add(row);
+
+
+                    }
+                    SaveDate();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+        private void SaveDate()
+        {
+            SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
+            adapter.Update(_ItemDt);
         }
         private void SaveDataIPayments(string checkID)
         {
+             adapter = new SqlDataAdapter("select * from ChecksPayments", adoClass.sqlcon);
+           _ItemDt = new DataTable();
+            {
+                try
+                {
 
+                    adapter.Fill(_ItemDt);
+                   
+                        DataRow row = _ItemDt.NewRow();
+                        row["CheckID"] = int.Parse(checkID);
+                        row["PaymentID"] = (comboBox1.SelectedItem as comboItem).Id;
+                    row["paymentValue"] = decimal.Parse(txtPaid.Text);
+
+                    _ItemDt.Rows.Add(row);  
+
+
+
+                    SaveDate();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
 
         private void btnPay_Click(object sender, EventArgs e)
@@ -309,6 +364,17 @@ namespace SmatPOS.Forms
                 MessageBox.Show("Can't Pay Without Money");
                 return;
             }
+            if(totalPay<totalCheck)
+            {
+                MessageBox.Show("The paymetn not enough");
+            }
+            if(comboBox1.Text==string.Empty) {
+                MessageBox.Show("Please select the payment method");
+                return;
+            }
+           
+            txtPaid.Text = totalPay.ToString();
+            txtchange.Text=(totalPay-totalCheck).ToString();
             SaveCheck();
         }
         }

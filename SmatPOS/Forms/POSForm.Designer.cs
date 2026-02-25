@@ -74,6 +74,7 @@
             this.ColItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colQTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colItemprice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -534,7 +535,8 @@
             this.ColID,
             this.ColItemName,
             this.colQTY,
-            this.ColPrice});
+            this.ColPrice,
+            this.colItemprice});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -584,6 +586,15 @@
             this.ColPrice.Name = "ColPrice";
             this.ColPrice.ReadOnly = true;
             this.ColPrice.Width = 125;
+            // 
+            // colItemprice
+            // 
+            this.colItemprice.HeaderText = "totalPrice";
+            this.colItemprice.MinimumWidth = 6;
+            this.colItemprice.Name = "colItemprice";
+            this.colItemprice.ReadOnly = true;
+            this.colItemprice.Visible = false;
+            this.colItemprice.Width = 125;
             // 
             // POSForm
             // 
@@ -649,10 +660,6 @@
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.DataGridView dgvItems;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColItemName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colQTY;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColPrice;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button15;
@@ -661,5 +668,10 @@
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColItemName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colQTY;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colItemprice;
     }
 }
