@@ -16,5 +16,11 @@ namespace SmatPOS.Forms
         {
             InitializeComponent();
         }
+
+        private void FormReports_Load(object sender, EventArgs e)
+        {
+
+            this.MainReport.RefreshReport();
+        }
     }
 }
