@@ -16,11 +16,23 @@ namespace SmatPOS.Forms
         public POSForm()
         {
             InitializeComponent();
+            checkID = "0";
         }
         private SqlDataAdapter adapter;
         private DataTable _ItemDt;
+        private string checkID;
         private void btnPrint_Click(object sender, EventArgs e)
         {
+            if (checkID == "0")
+            {
+                MessageBox.Show("Please save the check before print");
+                return;
+            }
+            else
+            { 
+            clsPrintChecks checks = new clsPrintChecks();
+            checks.printCheck(int.Parse(checkID));
+            }
 
         }
 
@@ -275,7 +287,8 @@ namespace SmatPOS.Forms
                     adoClass.sqlcon.Open(); 
                 }
                 sqlCommand.ExecuteNonQuery();   
-                string checkID = sqlCommand.Parameters["@CheckID"].Value.ToString();
+                 checkID = sqlCommand.Parameters["@CheckID"].Value.ToString();
+                this.Text += ":ID : " + checkID + " : ";
                 SaveDataItems(checkID);
                 SaveDataIPayments(checkID);
             }

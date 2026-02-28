@@ -14,10 +14,17 @@ namespace SmatPOS
         [STAThread]
         static void Main()
         {
-            declarations.UserID = -1;
-            Application.EnableVisualStyles();
+            
+            adoClass.SetConnection();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            FormLogin frmlogin = new FormLogin();
+            if (frmlogin.ShowDialog() == DialogResult.OK)
+            {
+
+                Application.EnableVisualStyles();
+                
+                Application.Run(new MainForm());
+            }
         }
     }
 }

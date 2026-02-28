@@ -26,7 +26,8 @@ namespace SmatPOS
             lblTime.Text = DateTime.Now.ToString();
             this.ControlBox = false;
             this.Text = string.Empty;
-            adoClass.SetConnection();
+            lblUser.Text=declarations.UserName; 
+          
         }
         private void OpenChildForm(Form childForm, object btnSender)
         {
@@ -132,6 +133,11 @@ namespace SmatPOS
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void pnlTitle_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

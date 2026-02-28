@@ -9,5 +9,6 @@ namespace SmatPOS
     public class declarations
     {
         public static int UserID { get; set; }
+        public static string UserName { get; set; }
     }
 }

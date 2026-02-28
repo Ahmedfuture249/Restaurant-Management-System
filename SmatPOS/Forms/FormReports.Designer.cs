@@ -60,6 +60,6 @@
 
         #endregion
 
-        private Microsoft.Reporting.WinForms.ReportViewer MainReport;
+        public Microsoft.Reporting.WinForms.ReportViewer MainReport;
     }
 }

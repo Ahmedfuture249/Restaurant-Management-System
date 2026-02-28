@@ -233,8 +233,15 @@
   <ItemGroup>
     <Compile Include="adoClass.cs" />
     <Compile Include="clsHelper.cs" />
+    <Compile Include="clsPrintChecks.cs" />
     <Compile Include="comboitem.cs" />
     <Compile Include="declarations.cs" />
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPayments.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -318,6 +325,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsChecks.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPayments.resx">
       <DependentUpon>FormPayments.cs</DependentUpon>
     </EmbeddedResource>
@@ -460,6 +470,8 @@
     <None Include="Resources\log-out1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\restaurant.jpg" />
+    <None Include="Resources\key.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

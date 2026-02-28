@@ -44,6 +44,7 @@
             this.btnSetup = new System.Windows.Forms.Button();
             this.btnPOS = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblUser = new System.Windows.Forms.Label();
             this.pnMenu.SuspendLayout();
             this.pnlogo.SuspendLayout();
             this.pnlTitle.SuspendLayout();
@@ -102,6 +103,7 @@
             // pnlTitle
             // 
             this.pnlTitle.BackColor = System.Drawing.Color.Gray;
+            this.pnlTitle.Controls.Add(this.lblUser);
             this.pnlTitle.Controls.Add(this.btnExit);
             this.pnlTitle.Controls.Add(this.lblTime);
             this.pnlTitle.Controls.Add(this.lblTitle);
@@ -110,6 +112,7 @@
             this.pnlTitle.Name = "pnlTitle";
             this.pnlTitle.Size = new System.Drawing.Size(917, 102);
             this.pnlTitle.TabIndex = 1;
+            this.pnlTitle.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTitle_Paint);
             // 
             // lblTime
             // 
@@ -250,6 +253,17 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.ForeColor = System.Drawing.Color.White;
+            this.lblUser.Location = new System.Drawing.Point(15, 59);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(49, 20);
+            this.lblUser.TabIndex = 7;
+            this.lblUser.Text = "User";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -289,6 +303,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnlMainForm;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Label lblUser;
     }
 }
 
