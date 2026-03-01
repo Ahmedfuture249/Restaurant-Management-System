@@ -63,6 +63,16 @@ namespace SmatPOS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap alMohamady {
+            get {
+                object obj = ResourceManager.GetObject("alMohamady", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap business_report {
             get {
                 object obj = ResourceManager.GetObject("business-report", resourceCulture);
@@ -86,6 +96,16 @@ namespace SmatPOS.Properties {
         internal static System.Drawing.Bitmap cashier_machine {
             get {
                 object obj = ResourceManager.GetObject("cashier-machine", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap chaef {
+            get {
+                object obj = ResourceManager.GetObject("chaef", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -306,6 +326,16 @@ namespace SmatPOS.Properties {
         internal static System.Drawing.Bitmap trash_can {
             get {
                 object obj = ResourceManager.GetObject("trash-can", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap شعار_logo_ازرق_و_ابيض_لمتجر_عبايات_abaya {
+            get {
+                object obj = ResourceManager.GetObject("شعار logo ازرق و ابيض لمتجر عبايات abaya", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

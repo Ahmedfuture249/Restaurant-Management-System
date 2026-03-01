@@ -233,19 +233,20 @@
   <ItemGroup>
     <Compile Include="adoClass.cs" />
     <Compile Include="clsHelper.cs" />
+    <Compile Include="clsLoading.cs" />
     <Compile Include="clsPrintChecks.cs" />
     <Compile Include="comboitem.cs" />
     <Compile Include="declarations.cs" />
-    <Compile Include="FormLogin.cs">
+    <Compile Include="Forms\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLogin.Designer.cs">
+    <Compile Include="Forms\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPayments.cs">
+    <Compile Include="Forms\FormPayments.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPayments.Designer.cs">
+    <Compile Include="Forms\FormPayments.Designer.cs">
       <DependentUpon>FormPayments.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormCategories.cs">
@@ -271,6 +272,12 @@
     </Compile>
     <Compile Include="Forms\FormSelect.Designer.cs">
       <DependentUpon>FormSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormSetUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSetUp.Designer.cs">
+      <DependentUpon>FormSetUp.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormUsers.cs">
       <SubType>Form</SubType>
@@ -325,10 +332,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsChecks.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FormLogin.resx">
+    <EmbeddedResource Include="Forms\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPayments.resx">
+    <EmbeddedResource Include="Forms\FormPayments.resx">
       <DependentUpon>FormPayments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormCategories.resx">
@@ -342,6 +349,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormSelect.resx">
       <DependentUpon>FormSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormSetUp.resx">
+      <DependentUpon>FormSetUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormUsers.resx">
       <DependentUpon>FormUsers.cs</DependentUpon>
@@ -472,6 +482,9 @@
   <ItemGroup>
     <None Include="Resources\restaurant.jpg" />
     <None Include="Resources\key.png" />
+    <None Include="Resources\chaef.jpg" />
+    <None Include="Resources\alMohamady.png" />
+    <None Include="Resources\شعار logo ازرق و ابيض لمتجر عبايات abaya.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
