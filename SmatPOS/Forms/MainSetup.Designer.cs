@@ -28,12 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnPermissions = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnCategories = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
             this.btnPayments = new System.Windows.Forms.Button();
             this.btnItems = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // btnPermissions
+            // 
+            this.btnPermissions.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPermissions.Image = global::SmatPOS.Properties.Resources.shield;
+            this.btnPermissions.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnPermissions.Location = new System.Drawing.Point(210, 131);
+            this.btnPermissions.Name = "btnPermissions";
+            this.btnPermissions.Size = new System.Drawing.Size(179, 115);
+            this.btnPermissions.TabIndex = 6;
+            this.btnPermissions.Text = "Permissions";
+            this.btnPermissions.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPermissions.UseVisualStyleBackColor = true;
+            this.btnPermissions.Click += new System.EventHandler(this.btnPermissions_Click);
             // 
             // btnExit
             // 
@@ -111,6 +126,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 544);
+            this.Controls.Add(this.btnPermissions);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnCategories);
             this.Controls.Add(this.btnUsers);
@@ -129,5 +145,6 @@
         private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Button btnCategories;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnPermissions;
     }
 }

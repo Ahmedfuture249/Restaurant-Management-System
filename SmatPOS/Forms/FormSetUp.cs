@@ -32,8 +32,7 @@ namespace SmatPOS.Forms
                 Close();
                 return;
             }
-            progressBar1.Value += 10;
-          
+            progressBar1.Value += 5;
             progressBar1.Refresh();
         }
 

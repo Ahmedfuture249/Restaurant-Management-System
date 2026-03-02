@@ -46,5 +46,11 @@ namespace SmatPOS.Forms
             form.ShowDialog();
 
         }
+
+        private void btnPermissions_Click(object sender, EventArgs e)
+        {
+            FormPermissions form= new FormPermissions();    
+            form.ShowDialog();  
+        }
     }
 }
