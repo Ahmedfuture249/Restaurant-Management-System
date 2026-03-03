@@ -33,33 +33,33 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.comboBoxUsers = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.checkBoxPointOfSale = new System.Windows.Forms.CheckBox();
-            this.checkBoxOptions = new System.Windows.Forms.CheckBox();
-            this.checkBoxReports = new System.Windows.Forms.CheckBox();
-            this.checkboxSetup = new System.Windows.Forms.CheckBox();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.checkBoxSave = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBoxPayments = new System.Windows.Forms.CheckBox();
-            this.checkBoxUsers = new System.Windows.Forms.CheckBox();
-            this.checkBoxCategories = new System.Windows.Forms.CheckBox();
-            this.checkBoxItems = new System.Windows.Forms.CheckBox();
-            this.checkBoxUserPermissions = new System.Windows.Forms.CheckBox();
-            this.checkBoxTaples = new System.Windows.Forms.CheckBox();
-            this.checkBoxSalesReport = new System.Windows.Forms.CheckBox();
             this.toolStripBtnSve = new System.Windows.Forms.ToolStripButton();
             this.btnCheckAll = new System.Windows.Forms.ToolStripButton();
             this.btnRemoveAll = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnExit = new System.Windows.Forms.ToolStripButton();
+            this.comboBoxUsers = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.checkboxSetup = new System.Windows.Forms.CheckBox();
+            this.checkBoxReports = new System.Windows.Forms.CheckBox();
+            this.checkBoxOptions = new System.Windows.Forms.CheckBox();
+            this.checkBoxPointOfSale = new System.Windows.Forms.CheckBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.checkBoxTaples = new System.Windows.Forms.CheckBox();
+            this.checkBoxUserPermissions = new System.Windows.Forms.CheckBox();
+            this.checkBoxItems = new System.Windows.Forms.CheckBox();
+            this.checkBoxPayments = new System.Windows.Forms.CheckBox();
+            this.checkBoxUsers = new System.Windows.Forms.CheckBox();
+            this.checkBoxCategories = new System.Windows.Forms.CheckBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.checkBoxSalesReport = new System.Windows.Forms.CheckBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.checkBoxSave = new System.Windows.Forms.CheckBox();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -101,6 +101,47 @@
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "Point of sale";
             // 
+            // toolStripBtnSve
+            // 
+            this.toolStripBtnSve.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnSve.Image")));
+            this.toolStripBtnSve.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnSve.Name = "toolStripBtnSve";
+            this.toolStripBtnSve.Size = new System.Drawing.Size(50, 70);
+            this.toolStripBtnSve.Text = "Save";
+            this.toolStripBtnSve.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripBtnSve.Click += new System.EventHandler(this.toolStripBtnSve_Click);
+            // 
+            // btnCheckAll
+            // 
+            this.btnCheckAll.Image = ((System.Drawing.Image)(resources.GetObject("btnCheckAll.Image")));
+            this.btnCheckAll.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCheckAll.Name = "btnCheckAll";
+            this.btnCheckAll.Size = new System.Drawing.Size(72, 70);
+            this.btnCheckAll.Text = "check All";
+            this.btnCheckAll.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnCheckAll.Click += new System.EventHandler(this.btnCheckAll_Click);
+            // 
+            // btnRemoveAll
+            // 
+            this.btnRemoveAll.Image = ((System.Drawing.Image)(resources.GetObject("btnRemoveAll.Image")));
+            this.btnRemoveAll.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnRemoveAll.Name = "btnRemoveAll";
+            this.btnRemoveAll.Size = new System.Drawing.Size(89, 70);
+            this.btnRemoveAll.Text = "Remove All";
+            this.btnRemoveAll.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnRemoveAll.Click += new System.EventHandler(this.btnRemoveAll_Click);
+            // 
+            // toolStripBtnExit
+            // 
+            this.toolStripBtnExit.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripBtnExit.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnExit.Image")));
+            this.toolStripBtnExit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnExit.Name = "toolStripBtnExit";
+            this.toolStripBtnExit.Size = new System.Drawing.Size(50, 70);
+            this.toolStripBtnExit.Text = "Exit";
+            this.toolStripBtnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripBtnExit.Click += new System.EventHandler(this.toolStripBtnExit_Click);
+            // 
             // comboBoxUsers
             // 
             this.comboBoxUsers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -110,6 +151,7 @@
             this.comboBoxUsers.Name = "comboBoxUsers";
             this.comboBoxUsers.Size = new System.Drawing.Size(211, 30);
             this.comboBoxUsers.TabIndex = 2;
+            this.comboBoxUsers.SelectedIndexChanged += new System.EventHandler(this.comboBoxUsers_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -133,6 +175,58 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(832, 326);
             this.panel1.TabIndex = 4;
+            // 
+            // checkboxSetup
+            // 
+            this.checkboxSetup.AccessibleDescription = "Main";
+            this.checkboxSetup.AccessibleName = "SetUp";
+            this.checkboxSetup.AutoSize = true;
+            this.checkboxSetup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkboxSetup.Location = new System.Drawing.Point(157, 15);
+            this.checkboxSetup.Name = "checkboxSetup";
+            this.checkboxSetup.Size = new System.Drawing.Size(82, 24);
+            this.checkboxSetup.TabIndex = 9;
+            this.checkboxSetup.Text = "Set Up";
+            this.checkboxSetup.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxReports
+            // 
+            this.checkBoxReports.AccessibleDescription = "Main";
+            this.checkBoxReports.AccessibleName = "Reports";
+            this.checkBoxReports.AutoSize = true;
+            this.checkBoxReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxReports.Location = new System.Drawing.Point(309, 15);
+            this.checkBoxReports.Name = "checkBoxReports";
+            this.checkBoxReports.Size = new System.Drawing.Size(90, 24);
+            this.checkBoxReports.TabIndex = 8;
+            this.checkBoxReports.Text = "Reports";
+            this.checkBoxReports.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxOptions
+            // 
+            this.checkBoxOptions.AccessibleDescription = "Main";
+            this.checkBoxOptions.AccessibleName = "Options";
+            this.checkBoxOptions.AutoSize = true;
+            this.checkBoxOptions.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxOptions.Location = new System.Drawing.Point(445, 15);
+            this.checkBoxOptions.Name = "checkBoxOptions";
+            this.checkBoxOptions.Size = new System.Drawing.Size(89, 24);
+            this.checkBoxOptions.TabIndex = 7;
+            this.checkBoxOptions.Text = "Options";
+            this.checkBoxOptions.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxPointOfSale
+            // 
+            this.checkBoxPointOfSale.AccessibleDescription = "Main";
+            this.checkBoxPointOfSale.AccessibleName = "PointOfSale";
+            this.checkBoxPointOfSale.AutoSize = true;
+            this.checkBoxPointOfSale.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxPointOfSale.Location = new System.Drawing.Point(7, 15);
+            this.checkBoxPointOfSale.Name = "checkBoxPointOfSale";
+            this.checkBoxPointOfSale.Size = new System.Drawing.Size(130, 24);
+            this.checkBoxPointOfSale.TabIndex = 6;
+            this.checkBoxPointOfSale.Text = "Point Of Sale";
+            this.checkBoxPointOfSale.UseVisualStyleBackColor = true;
             // 
             // tabControl1
             // 
@@ -159,6 +253,45 @@
             this.tabPage1.Text = "point Of Sale";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AccessibleDescription = "PointOfSale";
+            this.checkBox1.AccessibleName = "TablesVeiw";
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(6, 77);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(122, 24);
+            this.checkBox1.TabIndex = 12;
+            this.checkBox1.Text = "Tables View";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AccessibleDescription = "PointOfSale";
+            this.checkBox2.AccessibleName = "POSChecks";
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox2.Location = new System.Drawing.Point(6, 17);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(187, 24);
+            this.checkBox2.TabIndex = 11;
+            this.checkBox2.Text = "Point of Sale Checks";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AccessibleDescription = "PointOfSale";
+            this.checkBox3.AccessibleName = "OpenChecks";
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox3.Location = new System.Drawing.Point(6, 47);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(132, 24);
+            this.checkBox3.TabIndex = 10;
+            this.checkBox3.Text = "Open Checks";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.checkBoxTaples);
@@ -175,127 +308,44 @@
             this.tabPage2.Text = "Set Up";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // checkBoxPointOfSale
+            // checkBoxTaples
             // 
-            this.checkBoxPointOfSale.AccessibleDescription = "Main";
-            this.checkBoxPointOfSale.AutoSize = true;
-            this.checkBoxPointOfSale.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxPointOfSale.Location = new System.Drawing.Point(7, 15);
-            this.checkBoxPointOfSale.Name = "checkBoxPointOfSale";
-            this.checkBoxPointOfSale.Size = new System.Drawing.Size(130, 24);
-            this.checkBoxPointOfSale.TabIndex = 6;
-            this.checkBoxPointOfSale.Text = "Point Of Sale";
-            this.checkBoxPointOfSale.UseVisualStyleBackColor = true;
+            this.checkBoxTaples.AccessibleDescription = "SetUp";
+            this.checkBoxTaples.AccessibleName = "Taples";
+            this.checkBoxTaples.AutoSize = true;
+            this.checkBoxTaples.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxTaples.Location = new System.Drawing.Point(21, 121);
+            this.checkBoxTaples.Name = "checkBoxTaples";
+            this.checkBoxTaples.Size = new System.Drawing.Size(81, 24);
+            this.checkBoxTaples.TabIndex = 16;
+            this.checkBoxTaples.Text = "Taples";
+            this.checkBoxTaples.UseVisualStyleBackColor = true;
             // 
-            // checkBoxOptions
+            // checkBoxUserPermissions
             // 
-            this.checkBoxOptions.AccessibleDescription = "Main";
-            this.checkBoxOptions.AutoSize = true;
-            this.checkBoxOptions.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxOptions.Location = new System.Drawing.Point(445, 15);
-            this.checkBoxOptions.Name = "checkBoxOptions";
-            this.checkBoxOptions.Size = new System.Drawing.Size(89, 24);
-            this.checkBoxOptions.TabIndex = 7;
-            this.checkBoxOptions.Text = "Options";
-            this.checkBoxOptions.UseVisualStyleBackColor = true;
+            this.checkBoxUserPermissions.AccessibleDescription = "SetUp";
+            this.checkBoxUserPermissions.AccessibleName = "UserPermissions";
+            this.checkBoxUserPermissions.AutoSize = true;
+            this.checkBoxUserPermissions.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxUserPermissions.Location = new System.Drawing.Point(192, 20);
+            this.checkBoxUserPermissions.Name = "checkBoxUserPermissions";
+            this.checkBoxUserPermissions.Size = new System.Drawing.Size(174, 24);
+            this.checkBoxUserPermissions.TabIndex = 15;
+            this.checkBoxUserPermissions.Text = "Users Permissions";
+            this.checkBoxUserPermissions.UseVisualStyleBackColor = true;
             // 
-            // checkBoxReports
+            // checkBoxItems
             // 
-            this.checkBoxReports.AccessibleDescription = "Main";
-            this.checkBoxReports.AutoSize = true;
-            this.checkBoxReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxReports.Location = new System.Drawing.Point(309, 15);
-            this.checkBoxReports.Name = "checkBoxReports";
-            this.checkBoxReports.Size = new System.Drawing.Size(90, 24);
-            this.checkBoxReports.TabIndex = 8;
-            this.checkBoxReports.Text = "Reports";
-            this.checkBoxReports.UseVisualStyleBackColor = true;
-            // 
-            // checkboxSetup
-            // 
-            this.checkboxSetup.AccessibleDescription = "Main";
-            this.checkboxSetup.AutoSize = true;
-            this.checkboxSetup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkboxSetup.Location = new System.Drawing.Point(157, 15);
-            this.checkboxSetup.Name = "checkboxSetup";
-            this.checkboxSetup.Size = new System.Drawing.Size(82, 24);
-            this.checkboxSetup.TabIndex = 9;
-            this.checkboxSetup.Text = "Set Up";
-            this.checkboxSetup.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.checkBoxSalesReport);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(762, 234);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Reports";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.checkBoxSave);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(762, 234);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Options";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxSave
-            // 
-            this.checkBoxSave.AccessibleDescription = "Options";
-            this.checkBoxSave.AccessibleName = "Save";
-            this.checkBoxSave.AutoSize = true;
-            this.checkBoxSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxSave.Location = new System.Drawing.Point(6, 28);
-            this.checkBoxSave.Name = "checkBoxSave";
-            this.checkBoxSave.Size = new System.Drawing.Size(66, 24);
-            this.checkBoxSave.TabIndex = 8;
-            this.checkBoxSave.Text = "save";
-            this.checkBoxSave.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AccessibleDescription = "Point Of Sale";
-            this.checkBox1.AccessibleName = "TablesVeiw";
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(6, 77);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(122, 24);
-            this.checkBox1.TabIndex = 12;
-            this.checkBox1.Text = "Tables View";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AccessibleDescription = "Point Of Sale";
-            this.checkBox2.AccessibleName = "POSChecks";
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(6, 17);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(187, 24);
-            this.checkBox2.TabIndex = 11;
-            this.checkBox2.Text = "Point of Sale Checks";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AccessibleDescription = "Point Of Sale";
-            this.checkBox3.AccessibleName = "OpenChecks";
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.Location = new System.Drawing.Point(6, 47);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(132, 24);
-            this.checkBox3.TabIndex = 10;
-            this.checkBox3.Text = "Open Checks";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBoxItems.AccessibleDescription = "SetUp";
+            this.checkBoxItems.AccessibleName = "Items";
+            this.checkBoxItems.AutoSize = true;
+            this.checkBoxItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxItems.Location = new System.Drawing.Point(192, 50);
+            this.checkBoxItems.Name = "checkBoxItems";
+            this.checkBoxItems.Size = new System.Drawing.Size(72, 24);
+            this.checkBoxItems.TabIndex = 14;
+            this.checkBoxItems.Text = "Items";
+            this.checkBoxItems.UseVisualStyleBackColor = true;
             // 
             // checkBoxPayments
             // 
@@ -336,44 +386,16 @@
             this.checkBoxCategories.Text = "Categories";
             this.checkBoxCategories.UseVisualStyleBackColor = true;
             // 
-            // checkBoxItems
+            // tabPage3
             // 
-            this.checkBoxItems.AccessibleDescription = "SetUp";
-            this.checkBoxItems.AccessibleName = "Items";
-            this.checkBoxItems.AutoSize = true;
-            this.checkBoxItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxItems.Location = new System.Drawing.Point(192, 50);
-            this.checkBoxItems.Name = "checkBoxItems";
-            this.checkBoxItems.Size = new System.Drawing.Size(72, 24);
-            this.checkBoxItems.TabIndex = 14;
-            this.checkBoxItems.Text = "Items";
-            this.checkBoxItems.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxUserPermissions
-            // 
-            this.checkBoxUserPermissions.AccessibleDescription = "SetUp";
-            this.checkBoxUserPermissions.AccessibleName = "UserPermissions";
-            this.checkBoxUserPermissions.AutoSize = true;
-            this.checkBoxUserPermissions.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxUserPermissions.Location = new System.Drawing.Point(192, 20);
-            this.checkBoxUserPermissions.Name = "checkBoxUserPermissions";
-            this.checkBoxUserPermissions.Size = new System.Drawing.Size(174, 24);
-            this.checkBoxUserPermissions.TabIndex = 15;
-            this.checkBoxUserPermissions.Text = "Users Permissions";
-            this.checkBoxUserPermissions.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxTaples
-            // 
-            this.checkBoxTaples.AccessibleDescription = "SetUp";
-            this.checkBoxTaples.AccessibleName = "Taples";
-            this.checkBoxTaples.AutoSize = true;
-            this.checkBoxTaples.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxTaples.Location = new System.Drawing.Point(21, 121);
-            this.checkBoxTaples.Name = "checkBoxTaples";
-            this.checkBoxTaples.Size = new System.Drawing.Size(81, 24);
-            this.checkBoxTaples.TabIndex = 16;
-            this.checkBoxTaples.Text = "Taples";
-            this.checkBoxTaples.UseVisualStyleBackColor = true;
+            this.tabPage3.Controls.Add(this.checkBoxSalesReport);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(814, 245);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Reports";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // checkBoxSalesReport
             // 
@@ -388,45 +410,29 @@
             this.checkBoxSalesReport.Text = "Sales Repote";
             this.checkBoxSalesReport.UseVisualStyleBackColor = true;
             // 
-            // toolStripBtnSve
+            // tabPage4
             // 
-            this.toolStripBtnSve.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnSve.Image")));
-            this.toolStripBtnSve.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnSve.Name = "toolStripBtnSve";
-            this.toolStripBtnSve.Size = new System.Drawing.Size(50, 70);
-            this.toolStripBtnSve.Text = "Save";
-            this.toolStripBtnSve.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tabPage4.Controls.Add(this.checkBoxSave);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(814, 245);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Options";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // btnCheckAll
+            // checkBoxSave
             // 
-            this.btnCheckAll.Image = ((System.Drawing.Image)(resources.GetObject("btnCheckAll.Image")));
-            this.btnCheckAll.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCheckAll.Name = "btnCheckAll";
-            this.btnCheckAll.Size = new System.Drawing.Size(72, 70);
-            this.btnCheckAll.Text = "check All";
-            this.btnCheckAll.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnCheckAll.Click += new System.EventHandler(this.btnCheckAll_Click);
-            // 
-            // btnRemoveAll
-            // 
-            this.btnRemoveAll.Image = ((System.Drawing.Image)(resources.GetObject("btnRemoveAll.Image")));
-            this.btnRemoveAll.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnRemoveAll.Name = "btnRemoveAll";
-            this.btnRemoveAll.Size = new System.Drawing.Size(89, 70);
-            this.btnRemoveAll.Text = "Remove All";
-            this.btnRemoveAll.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnRemoveAll.Click += new System.EventHandler(this.btnRemoveAll_Click);
-            // 
-            // toolStripBtnExit
-            // 
-            this.toolStripBtnExit.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripBtnExit.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnExit.Image")));
-            this.toolStripBtnExit.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnExit.Name = "toolStripBtnExit";
-            this.toolStripBtnExit.Size = new System.Drawing.Size(50, 70);
-            this.toolStripBtnExit.Text = "Exit";
-            this.toolStripBtnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripBtnExit.Click += new System.EventHandler(this.toolStripBtnExit_Click);
+            this.checkBoxSave.AccessibleDescription = "Options";
+            this.checkBoxSave.AccessibleName = "Save";
+            this.checkBoxSave.AutoSize = true;
+            this.checkBoxSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxSave.Location = new System.Drawing.Point(6, 28);
+            this.checkBoxSave.Name = "checkBoxSave";
+            this.checkBoxSave.Size = new System.Drawing.Size(66, 24);
+            this.checkBoxSave.TabIndex = 8;
+            this.checkBoxSave.Text = "save";
+            this.checkBoxSave.UseVisualStyleBackColor = true;
             // 
             // FormPermissions
             // 
