@@ -26,8 +26,9 @@ namespace SmatPOS
             lblTime.Text = DateTime.Now.ToString();
             this.ControlBox = false;
             this.Text = string.Empty;
-            lblUser.Text=declarations.UserName; 
-          
+            lblUser.Text=declarations.UserName;
+            clsHelper.LoadPermissions(this.Controls, "Main");
+
         }
         private void OpenChildForm(Form childForm, object btnSender)
         {

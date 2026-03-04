@@ -79,5 +79,22 @@ namespace SmatPOS
                 adoClass.sqlcon.Close();
             }
         }
+        public static void LoadPermissions(Control.ControlCollection controls, string MainScreen)
+        {
+            foreach (Control control in controls)
+            {
+               
+                   declarations.ModelPermission permission = declarations.permissions.FirstOrDefault(p => p.mainscreen == MainScreen && p.permission == control.AccessibleName);
+                    if (permission != null)
+                    {
+                        control.Enabled = permission.thecase;
+                    }
+                
+                if (control.Controls.Count > 0)
+                {
+                    LoadPermissions(control.Controls, MainScreen);
+                }
+            }
+        }
     }
 }

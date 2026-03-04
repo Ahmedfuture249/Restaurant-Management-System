@@ -11,5 +11,15 @@ namespace SmatPOS
         public static int UserID { get; set; }
         public static string UserName { get; set; }
         public static Dictionary<string, Object> systemOptions ;
+        public static List<ModelPermission> permissions = new List<ModelPermission>();
+
+        public class ModelPermission
+        {
+            public string mainscreen { get; set; }
+            public string permission { get; set; }
+            public bool thecase{ get; set; }
+            
+
+        }
     }
 }

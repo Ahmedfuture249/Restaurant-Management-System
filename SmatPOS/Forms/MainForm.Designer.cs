@@ -30,25 +30,25 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnMenu = new System.Windows.Forms.Panel();
-            this.pnlogo = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.linkLabelmyInfo = new System.Windows.Forms.LinkLabel();
-            this.pnlTitle = new System.Windows.Forms.Panel();
-            this.lblTime = new System.Windows.Forms.Label();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pnlMainForm = new System.Windows.Forms.Panel();
-            this.btnExit = new System.Windows.Forms.Button();
             this.btnOptions = new System.Windows.Forms.Button();
             this.btnReporting = new System.Windows.Forms.Button();
             this.btnSetup = new System.Windows.Forms.Button();
             this.btnPOS = new System.Windows.Forms.Button();
+            this.pnlogo = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.linkLabelmyInfo = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnlTitle = new System.Windows.Forms.Panel();
             this.lblUser = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pnlMainForm = new System.Windows.Forms.Panel();
             this.pnMenu.SuspendLayout();
             this.pnlogo.SuspendLayout();
-            this.pnlTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlTitle.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnMenu
@@ -64,6 +64,86 @@
             this.pnMenu.Name = "pnMenu";
             this.pnMenu.Size = new System.Drawing.Size(261, 606);
             this.pnMenu.TabIndex = 0;
+            // 
+            // btnOptions
+            // 
+            this.btnOptions.AccessibleName = "Options";
+            this.btnOptions.BackColor = System.Drawing.Color.Gray;
+            this.btnOptions.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOptions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOptions.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOptions.ForeColor = System.Drawing.Color.White;
+            this.btnOptions.Image = global::SmatPOS.Properties.Resources.gear;
+            this.btnOptions.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOptions.Location = new System.Drawing.Point(0, 342);
+            this.btnOptions.Name = "btnOptions";
+            this.btnOptions.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnOptions.Size = new System.Drawing.Size(261, 92);
+            this.btnOptions.TabIndex = 4;
+            this.btnOptions.Text = "Options";
+            this.btnOptions.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnOptions.UseVisualStyleBackColor = false;
+            this.btnOptions.Click += new System.EventHandler(this.btnOptions_Click);
+            // 
+            // btnReporting
+            // 
+            this.btnReporting.AccessibleName = "Reports";
+            this.btnReporting.BackColor = System.Drawing.Color.Gray;
+            this.btnReporting.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReporting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporting.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporting.ForeColor = System.Drawing.Color.White;
+            this.btnReporting.Image = global::SmatPOS.Properties.Resources.report;
+            this.btnReporting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReporting.Location = new System.Drawing.Point(0, 266);
+            this.btnReporting.Name = "btnReporting";
+            this.btnReporting.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnReporting.Size = new System.Drawing.Size(261, 76);
+            this.btnReporting.TabIndex = 3;
+            this.btnReporting.Text = "Reporting";
+            this.btnReporting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReporting.UseVisualStyleBackColor = false;
+            this.btnReporting.Click += new System.EventHandler(this.btnReporting_Click);
+            // 
+            // btnSetup
+            // 
+            this.btnSetup.AccessibleName = "SetUp";
+            this.btnSetup.BackColor = System.Drawing.Color.Gray;
+            this.btnSetup.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSetup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetup.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetup.ForeColor = System.Drawing.Color.White;
+            this.btnSetup.Image = global::SmatPOS.Properties.Resources.settings;
+            this.btnSetup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSetup.Location = new System.Drawing.Point(0, 184);
+            this.btnSetup.Name = "btnSetup";
+            this.btnSetup.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnSetup.Size = new System.Drawing.Size(261, 82);
+            this.btnSetup.TabIndex = 2;
+            this.btnSetup.Text = "Setup";
+            this.btnSetup.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSetup.UseVisualStyleBackColor = false;
+            this.btnSetup.Click += new System.EventHandler(this.btnSetup_Click);
+            // 
+            // btnPOS
+            // 
+            this.btnPOS.AccessibleName = "PointOfSale";
+            this.btnPOS.BackColor = System.Drawing.Color.Gray;
+            this.btnPOS.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPOS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPOS.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPOS.ForeColor = System.Drawing.Color.White;
+            this.btnPOS.Image = global::SmatPOS.Properties.Resources.shopping_cart;
+            this.btnPOS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPOS.Location = new System.Drawing.Point(0, 102);
+            this.btnPOS.Name = "btnPOS";
+            this.btnPOS.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnPOS.Size = new System.Drawing.Size(261, 82);
+            this.btnPOS.TabIndex = 1;
+            this.btnPOS.Text = "Point Of Sale";
+            this.btnPOS.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPOS.UseVisualStyleBackColor = false;
+            this.btnPOS.Click += new System.EventHandler(this.btnPOS_Click);
             // 
             // pnlogo
             // 
@@ -100,6 +180,16 @@
             this.linkLabelmyInfo.TabStop = true;
             this.linkLabelmyInfo.Text = "Eng : Ahmed";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SmatPOS.Properties.Resources.fast_food;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(91, 84);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // pnlTitle
             // 
             this.pnlTitle.BackColor = System.Drawing.Color.Gray;
@@ -113,6 +203,32 @@
             this.pnlTitle.Size = new System.Drawing.Size(917, 102);
             this.pnlTitle.TabIndex = 1;
             this.pnlTitle.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTitle_Paint);
+            // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.ForeColor = System.Drawing.Color.White;
+            this.lblUser.Location = new System.Drawing.Point(15, 59);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(49, 20);
+            this.lblUser.TabIndex = 7;
+            this.lblUser.Text = "User";
+            // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.BackgroundImage = global::SmatPOS.Properties.Resources.exit;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnExit.Location = new System.Drawing.Point(831, 47);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(83, 52);
+            this.btnExit.TabIndex = 6;
+            this.btnExit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // lblTime
             // 
@@ -152,118 +268,6 @@
             this.pnlMainForm.TabIndex = 2;
             this.pnlMainForm.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMainForm_Paint);
             // 
-            // btnExit
-            // 
-            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExit.BackgroundImage = global::SmatPOS.Properties.Resources.exit;
-            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnExit.Location = new System.Drawing.Point(831, 47);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(83, 52);
-            this.btnExit.TabIndex = 6;
-            this.btnExit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnOptions
-            // 
-            this.btnOptions.BackColor = System.Drawing.Color.Gray;
-            this.btnOptions.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnOptions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOptions.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOptions.ForeColor = System.Drawing.Color.White;
-            this.btnOptions.Image = global::SmatPOS.Properties.Resources.gear;
-            this.btnOptions.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOptions.Location = new System.Drawing.Point(0, 342);
-            this.btnOptions.Name = "btnOptions";
-            this.btnOptions.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btnOptions.Size = new System.Drawing.Size(261, 92);
-            this.btnOptions.TabIndex = 4;
-            this.btnOptions.Text = "Options";
-            this.btnOptions.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnOptions.UseVisualStyleBackColor = false;
-            this.btnOptions.Click += new System.EventHandler(this.btnOptions_Click);
-            // 
-            // btnReporting
-            // 
-            this.btnReporting.BackColor = System.Drawing.Color.Gray;
-            this.btnReporting.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReporting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReporting.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReporting.ForeColor = System.Drawing.Color.White;
-            this.btnReporting.Image = global::SmatPOS.Properties.Resources.report;
-            this.btnReporting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReporting.Location = new System.Drawing.Point(0, 266);
-            this.btnReporting.Name = "btnReporting";
-            this.btnReporting.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btnReporting.Size = new System.Drawing.Size(261, 76);
-            this.btnReporting.TabIndex = 3;
-            this.btnReporting.Text = "Reporting";
-            this.btnReporting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnReporting.UseVisualStyleBackColor = false;
-            this.btnReporting.Click += new System.EventHandler(this.btnReporting_Click);
-            // 
-            // btnSetup
-            // 
-            this.btnSetup.BackColor = System.Drawing.Color.Gray;
-            this.btnSetup.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSetup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetup.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetup.ForeColor = System.Drawing.Color.White;
-            this.btnSetup.Image = global::SmatPOS.Properties.Resources.settings;
-            this.btnSetup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSetup.Location = new System.Drawing.Point(0, 184);
-            this.btnSetup.Name = "btnSetup";
-            this.btnSetup.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btnSetup.Size = new System.Drawing.Size(261, 82);
-            this.btnSetup.TabIndex = 2;
-            this.btnSetup.Text = "Setup";
-            this.btnSetup.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSetup.UseVisualStyleBackColor = false;
-            this.btnSetup.Click += new System.EventHandler(this.btnSetup_Click);
-            // 
-            // btnPOS
-            // 
-            this.btnPOS.BackColor = System.Drawing.Color.Gray;
-            this.btnPOS.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPOS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPOS.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPOS.ForeColor = System.Drawing.Color.White;
-            this.btnPOS.Image = global::SmatPOS.Properties.Resources.shopping_cart;
-            this.btnPOS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPOS.Location = new System.Drawing.Point(0, 102);
-            this.btnPOS.Name = "btnPOS";
-            this.btnPOS.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btnPOS.Size = new System.Drawing.Size(261, 82);
-            this.btnPOS.TabIndex = 1;
-            this.btnPOS.Text = "Point Of Sale";
-            this.btnPOS.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPOS.UseVisualStyleBackColor = false;
-            this.btnPOS.Click += new System.EventHandler(this.btnPOS_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SmatPOS.Properties.Resources.fast_food;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(91, 84);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lblUser
-            // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.ForeColor = System.Drawing.Color.White;
-            this.lblUser.Location = new System.Drawing.Point(15, 59);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(49, 20);
-            this.lblUser.TabIndex = 7;
-            this.lblUser.Text = "User";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -279,9 +283,9 @@
             this.pnMenu.ResumeLayout(false);
             this.pnlogo.ResumeLayout(false);
             this.pnlogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

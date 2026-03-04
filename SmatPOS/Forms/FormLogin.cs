@@ -57,6 +57,7 @@ namespace SmatPOS
             catch (Exception ex)
             {
                 MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             finally
             {
@@ -64,6 +65,10 @@ namespace SmatPOS
                     Reader.Close();
 
                adoClass.sqlcon.Close();
+            }
+            if(declarations.UserID != 0)
+            {
+                LoadPermission();
             }
         }
 
@@ -88,10 +93,75 @@ namespace SmatPOS
             }
             Login();
         }
+        //private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        //{
+        //    if (e.KeyCode == Keys.Enter)
+        //    {
+        //        btnOk.PerformClick();
+        //    }
+        //}
+        //private void txtUserName_KeyDown(object sender, KeyEventArgs e)
+        //{
+        //    if (e.KeyCode == Keys.Enter)
+        //    {
+        //        txtPassword.Focus();
+        //    }
+        //}
+        private void LoadPermission()
+        {
+            string query = "SELECT * FROM UserPermission WHERE UserID = @UserID";
+            SqlCommand cmd = new SqlCommand(query, adoClass.sqlcon);
+            cmd.Parameters.AddWithValue("@UserID", declarations.UserID);
+            declarations.permissions= new List<declarations.ModelPermission>();
+            try
+            {
+                
+                if (adoClass.sqlcon.State != ConnectionState.Open) { adoClass.sqlcon.Open(); }
+                Reader = cmd.ExecuteReader();
+                while (Reader.Read())
+                {
+
+                    declarations.ModelPermission model = new declarations.ModelPermission();
+
+
+                    model.mainscreen = Reader["mainscreen"].ToString();
+                    model.permission = Reader["permission"].ToString();
+                    model.thecase = Convert.ToBoolean(Reader["thecase"]);
+
+                    declarations.permissions.Add(model);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while loading permissions: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (Reader != null && !Reader.IsClosed)
+                    Reader.Close();
+                adoClass.sqlcon.Close();
+            }
+        }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void txtUserName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtPassword.Focus();
+            }
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnOk.PerformClick();
+            }
         }
     }
 }

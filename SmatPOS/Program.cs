@@ -19,18 +19,18 @@ namespace SmatPOS
             adoClass.SetConnection();
             Application.SetCompatibleTextRenderingDefault(false);
             FormSatrtUp frmSetUp = new FormSatrtUp();
-            //if (frmSetUp.ShowDialog() == DialogResult.OK)
-            //{
+            if (frmSetUp.ShowDialog() == DialogResult.OK)
+            {
 
-            //    FormLogin frmlogin = new FormLogin();
-            //    if (frmlogin.ShowDialog() == DialogResult.OK)
-            //    {
+                FormLogin frmlogin = new FormLogin();
+                if (frmlogin.ShowDialog() == DialogResult.OK)
+                {
 
                     Application.EnableVisualStyles();
 
                     Application.Run(new MainForm());
-            //    }
-            //}
+                }
+            }
         }
     }
 }
