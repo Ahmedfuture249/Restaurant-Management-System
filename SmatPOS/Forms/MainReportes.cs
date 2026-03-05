@@ -24,7 +24,17 @@ namespace SmatPOS.Forms
 
         private void MainReportes_Load(object sender, EventArgs e)
         {
-            clsHelper.LoadPermissions(this.Controls, ";MainReportes");
+            clsHelper.LoadPermissions(this.Controls, "MainReportes");
+        }
+
+        private void btnItems_Click(object sender, EventArgs e)
+        {
+            FormFilterDate frm = new FormFilterDate();
+            if(frm.ShowDialog() == DialogResult.OK)
+            {
+                clsPrintChecks checks = new clsPrintChecks();
+                checks.PrintSaleReport(frm._From, frm._TO);
+            }
         }
     }
 }

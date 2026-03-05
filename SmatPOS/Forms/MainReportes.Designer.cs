@@ -28,22 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnItems = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnItems = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btnItems
-            // 
-            this.btnItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnItems.Image = global::SmatPOS.Properties.Resources.business_report;
-            this.btnItems.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnItems.Location = new System.Drawing.Point(12, 12);
-            this.btnItems.Name = "btnItems";
-            this.btnItems.Size = new System.Drawing.Size(168, 115);
-            this.btnItems.TabIndex = 2;
-            this.btnItems.Text = "Sale";
-            this.btnItems.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnItems.UseVisualStyleBackColor = true;
             // 
             // btnExit
             // 
@@ -59,6 +46,20 @@
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnItems
+            // 
+            this.btnItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnItems.Image = global::SmatPOS.Properties.Resources.business_report;
+            this.btnItems.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnItems.Location = new System.Drawing.Point(12, 12);
+            this.btnItems.Name = "btnItems";
+            this.btnItems.Size = new System.Drawing.Size(168, 115);
+            this.btnItems.TabIndex = 2;
+            this.btnItems.Text = "Sale";
+            this.btnItems.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnItems.UseVisualStyleBackColor = true;
+            this.btnItems.Click += new System.EventHandler(this.btnItems_Click);
             // 
             // MainReportes
             // 

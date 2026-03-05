@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using SmatPOS.Tools;
 using SmatPOS.Forms;
 using Microsoft.Reporting.WinForms;
+using System.Windows.Forms;
 namespace SmatPOS
 {
     
@@ -15,6 +16,8 @@ namespace SmatPOS
     {
         private SqlCommand cmd;
         private SqlDataReader dr;
+        private SqlDataAdapter dataAdapter;
+        private DataTable dt;
 
         public void printCheck(int CheckID)
         {
@@ -68,6 +71,34 @@ namespace SmatPOS
             rb[3] = new ReportParameter("image", Convert.ToBase64String(imagebytes));
             frm.MainReport.LocalReport.SetParameters(rb);
             frm.ShowDialog();
+        }
+        public  void PrintSaleReport(DateTime _from, DateTime _to)
+        {
+            string query = "select * from ViewSaleChecks ";
+            dataAdapter = new SqlDataAdapter(query, adoClass.sqlcon);
+            dsReports report=new dsReports();
+            try
+            {
+                dataAdapter.Fill(report.Tables["ViewSaleChecks"]);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error!!");
+            }
+            FormReports frm = new FormReports();
+            frm.MainReport.LocalReport.ReportEmbeddedResource = "SmatPOS.rptchecksales.rdlc";
+            frm.MainReport.LocalReport.DataSources.Clear();
+            frm.MainReport.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", report.Tables["ViewSaleChecks"]));
+            ReportParameter[] rb = new ReportParameter[4];
+            rb[0] = new ReportParameter("From", _from.ToString("yyyy-MM-dd"));
+            rb[1] = new ReportParameter("To", _to.ToString("yyyy-MM-dd"));
+            rb[2] = new ReportParameter("restname", declarations.systemOptions["RestaruntName"].ToString());
+            byte[] imagebytes = (byte[])declarations.systemOptions["logo"];
+            rb[3] = new ReportParameter("Image", Convert.ToBase64String(imagebytes));
+            frm.MainReport.LocalReport.SetParameters(rb);
+            frm.ShowDialog();
+
+
         }
     }
 }
