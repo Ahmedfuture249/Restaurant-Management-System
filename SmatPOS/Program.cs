@@ -28,7 +28,8 @@ namespace SmatPOS
 
                     Application.EnableVisualStyles();
 
-                    Application.Run(new MainForm());
+                    
+                     Application.Run(new MainForm());
                 }
             }
         }

@@ -52,5 +52,10 @@ namespace SmatPOS.Forms
             FormPermissions form= new FormPermissions();    
             form.ShowDialog();  
         }
+
+        private void MainSetup_Load(object sender, EventArgs e)
+        {
+            clsHelper.LoadPermissions(this.Controls, "SetUp");
+        }
     }
 }

@@ -62,6 +62,7 @@
             // 
             // MainReportes
             // 
+            this.AccessibleName = "Reports";
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
@@ -69,6 +70,7 @@
             this.Controls.Add(this.btnItems);
             this.Name = "MainReportes";
             this.Text = "MainReportes";
+            this.Load += new System.EventHandler(this.MainReportes_Load);
             this.ResumeLayout(false);
 
         }

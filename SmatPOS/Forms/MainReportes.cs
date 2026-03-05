@@ -21,5 +21,10 @@ namespace SmatPOS.Forms
         {
             Close();
         }
+
+        private void MainReportes_Load(object sender, EventArgs e)
+        {
+            clsHelper.LoadPermissions(this.Controls, ";MainReportes");
+        }
     }
 }

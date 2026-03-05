@@ -49,6 +49,7 @@
             // 
             // btnPOS
             // 
+            this.btnPOS.AccessibleName = "PointOfSale";
             this.btnPOS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPOS.Image = global::SmatPOS.Properties.Resources.cashier_machine;
             this.btnPOS.ImageAlign = System.Drawing.ContentAlignment.TopCenter;

@@ -38,6 +38,7 @@
             // 
             // btnPermissions
             // 
+            this.btnPermissions.AccessibleName = "Permissions";
             this.btnPermissions.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPermissions.Image = global::SmatPOS.Properties.Resources.shield;
             this.btnPermissions.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -67,6 +68,7 @@
             // 
             // btnCategories
             // 
+            this.btnCategories.AccessibleName = "Categories";
             this.btnCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCategories.Image = global::SmatPOS.Properties.Resources.maintenance;
             this.btnCategories.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -81,6 +83,7 @@
             // 
             // btnUsers
             // 
+            this.btnUsers.AccessibleName = "Users";
             this.btnUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsers.Image = global::SmatPOS.Properties.Resources.man;
             this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -95,6 +98,7 @@
             // 
             // btnPayments
             // 
+            this.btnPayments.AccessibleName = "Payments";
             this.btnPayments.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPayments.Image = global::SmatPOS.Properties.Resources.online_payment;
             this.btnPayments.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -109,6 +113,7 @@
             // 
             // btnItems
             // 
+            this.btnItems.AccessibleName = "Items";
             this.btnItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnItems.Image = global::SmatPOS.Properties.Resources.food_delivery;
             this.btnItems.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -134,6 +139,7 @@
             this.Controls.Add(this.btnItems);
             this.Name = "MainSetup";
             this.Text = "MainSetup";
+            this.Load += new System.EventHandler(this.MainSetup_Load);
             this.ResumeLayout(false);
 
         }
