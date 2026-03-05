@@ -60,10 +60,12 @@ namespace SmatPOS
             frm.MainReport.LocalReport.ReportEmbeddedResource = "SmatPOS.rptCheck.rdlc";
             frm.MainReport.LocalReport.DataSources.Clear();
             frm.MainReport.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", checks.Tables["dtCheck"]));
-            ReportParameter[] rb = new ReportParameter[3];
+            ReportParameter[] rb = new ReportParameter[4];
             rb[0]=new ReportParameter("Line1", declarations.systemOptions["ReceiptLine1"].ToString());
             rb[1] = new ReportParameter("Line2", declarations.systemOptions["ReceiptLine2"].ToString());
             rb[2] = new ReportParameter("RestarauntName", declarations.systemOptions["RestaruntName"].ToString());
+            byte[] imagebytes = (byte[])declarations.systemOptions["logo"];
+            rb[3] = new ReportParameter("image", Convert.ToBase64String(imagebytes));
             frm.MainReport.LocalReport.SetParameters(rb);
             frm.ShowDialog();
         }
