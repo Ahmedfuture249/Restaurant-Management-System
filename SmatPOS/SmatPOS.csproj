@@ -410,6 +410,7 @@
     </Compile>
     <EmbeddedResource Include="rptchecksales.rdlc" />
     <EmbeddedResource Include="rptCheck.rdlc" />
+    <EmbeddedResource Include="rptsalesbyitem.rdlc" />
     <None Include="dsReports.xsc">
       <DependentUpon>dsReports.xsd</DependentUpon>
     </None>

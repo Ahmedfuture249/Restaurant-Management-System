@@ -133,5 +133,37 @@ namespace SmatPOS
 
 
         }
+        public void PrintSalesByItemReport(DateTime _from, DateTime _to,string catid)
+        {
+            string query = "select * from ViewSalesbyitem where checkdate between '"
++ _from.ToString("yyyy-MM-dd") +
+"' and '" + _to.ToString("yyyy-MM-dd") + " '";
+            query += "and id= '" + catid+" '";
+            dataAdapter = new SqlDataAdapter(query, adoClass.sqlcon);
+            dsReports report = new dsReports();
+            report.EnforceConstraints = false;
+            try
+            {
+                dataAdapter.Fill(report.Tables["ViewSalesbyitem"]);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error!!");
+            }
+            FormReports frm = new FormReports();
+            frm.MainReport.LocalReport.ReportEmbeddedResource = "SmatPOS.rptsalesbyitem.rdlc";
+            frm.MainReport.LocalReport.DataSources.Clear();
+            frm.MainReport.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", report.Tables["ViewSalesbyitem"]));
+            ReportParameter[] rb = new ReportParameter[4];
+            rb[0] = new ReportParameter("From", _from.ToString("yyyy-MM-dd"));
+            rb[1] = new ReportParameter("To", _to.ToString("yyyy-MM-dd"));
+            rb[2] = new ReportParameter("restname", declarations.systemOptions["RestaruntName"].ToString());
+            byte[] imagebytes = (byte[])declarations.systemOptions["logo"];
+            rb[3] = new ReportParameter("Image", Convert.ToBase64String(imagebytes));
+            frm.MainReport.LocalReport.SetParameters(rb);
+            frm.ShowDialog();
+
+
+        }
     }
 }

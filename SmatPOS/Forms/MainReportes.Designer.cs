@@ -31,6 +31,7 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnItems = new System.Windows.Forms.Button();
             this.btnDetailedsalesrpt = new System.Windows.Forms.Button();
+            this.btnSalesbyCategories = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnExit
@@ -76,12 +77,27 @@
             this.btnDetailedsalesrpt.UseVisualStyleBackColor = true;
             this.btnDetailedsalesrpt.Click += new System.EventHandler(this.btnDetailedsalesrpt_Click);
             // 
+            // btnSalesbyCategories
+            // 
+            this.btnSalesbyCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalesbyCategories.Image = global::SmatPOS.Properties.Resources.business_report;
+            this.btnSalesbyCategories.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSalesbyCategories.Location = new System.Drawing.Point(410, 12);
+            this.btnSalesbyCategories.Name = "btnSalesbyCategories";
+            this.btnSalesbyCategories.Size = new System.Drawing.Size(168, 115);
+            this.btnSalesbyCategories.TabIndex = 8;
+            this.btnSalesbyCategories.Text = "Sales by Categories";
+            this.btnSalesbyCategories.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSalesbyCategories.UseVisualStyleBackColor = true;
+            this.btnSalesbyCategories.Click += new System.EventHandler(this.btnSalesbyCategories_Click);
+            // 
             // MainReportes
             // 
             this.AccessibleName = "Reports";
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSalesbyCategories);
             this.Controls.Add(this.btnDetailedsalesrpt);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnItems);
@@ -97,5 +113,6 @@
         private System.Windows.Forms.Button btnItems;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnDetailedsalesrpt;
+        private System.Windows.Forms.Button btnSalesbyCategories;
     }
 }

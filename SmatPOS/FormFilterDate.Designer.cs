@@ -34,6 +34,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnOk = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.comboBoxCategories = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // dtpFrom
@@ -107,11 +109,34 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // comboBoxCategories
+            // 
+            this.comboBoxCategories.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxCategories.FormattingEnabled = true;
+            this.comboBoxCategories.Location = new System.Drawing.Point(166, 184);
+            this.comboBoxCategories.Name = "comboBoxCategories";
+            this.comboBoxCategories.Size = new System.Drawing.Size(244, 33);
+            this.comboBoxCategories.TabIndex = 49;
+            this.comboBoxCategories.Tag = "";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(47, 185);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(97, 21);
+            this.label3.TabIndex = 48;
+            this.label3.Text = "Categorey";
+            // 
             // FormFilterDate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(558, 328);
+            this.Controls.Add(this.comboBoxCategories);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label2);
@@ -134,5 +159,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.ComboBox comboBoxCategories;
+        private System.Windows.Forms.Label label3;
     }
 }

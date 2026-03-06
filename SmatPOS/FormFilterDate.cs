@@ -18,6 +18,20 @@ namespace SmatPOS
         }
         public DateTime _From { get =>dtpFrom.Value; }
         public DateTime _TO { get => dtpTo.Value; }
+        public string _catid
+        {
+            get
+            {
+                if (comboBoxCategories.Text != "")
+                {
+                    return ((comboItem)comboBoxCategories.SelectedItem).Id;
+                }
+                else
+                {
+                    return "0";
+                }
+            }
+        }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
@@ -40,6 +54,7 @@ namespace SmatPOS
         {
            dtpFrom.Value= DateTime.Now;
             dtpTo.Value= DateTime.Now;
+            clsHelper.fillComboBox(comboBoxCategories, "Select ID,Description from categories");
         }
     }
 }
