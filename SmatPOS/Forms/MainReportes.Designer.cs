@@ -30,6 +30,7 @@
         {
             this.btnExit = new System.Windows.Forms.Button();
             this.btnItems = new System.Windows.Forms.Button();
+            this.btnDetailedsalesrpt = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnExit
@@ -61,12 +62,27 @@
             this.btnItems.UseVisualStyleBackColor = true;
             this.btnItems.Click += new System.EventHandler(this.btnItems_Click);
             // 
+            // btnDetailedsalesrpt
+            // 
+            this.btnDetailedsalesrpt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDetailedsalesrpt.Image = global::SmatPOS.Properties.Resources.business_report;
+            this.btnDetailedsalesrpt.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnDetailedsalesrpt.Location = new System.Drawing.Point(208, 12);
+            this.btnDetailedsalesrpt.Name = "btnDetailedsalesrpt";
+            this.btnDetailedsalesrpt.Size = new System.Drawing.Size(168, 115);
+            this.btnDetailedsalesrpt.TabIndex = 7;
+            this.btnDetailedsalesrpt.Text = "Detailed Sales Report";
+            this.btnDetailedsalesrpt.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnDetailedsalesrpt.UseVisualStyleBackColor = true;
+            this.btnDetailedsalesrpt.Click += new System.EventHandler(this.btnDetailedsalesrpt_Click);
+            // 
             // MainReportes
             // 
             this.AccessibleName = "Reports";
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnDetailedsalesrpt);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnItems);
             this.Name = "MainReportes";
@@ -80,5 +96,6 @@
 
         private System.Windows.Forms.Button btnItems;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnDetailedsalesrpt;
     }
 }

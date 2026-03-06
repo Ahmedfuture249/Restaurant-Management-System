@@ -74,7 +74,9 @@ namespace SmatPOS
         }
         public  void PrintSaleReport(DateTime _from, DateTime _to)
         {
-            string query = "select * from ViewSaleChecks ";
+            string query = "select * from ViewSaleChecks where checkdate between '"
++ _from.ToString("yyyy-MM-dd") +
+"' and '" + _to.ToString("yyyy-MM-dd") + "'";
             dataAdapter = new SqlDataAdapter(query, adoClass.sqlcon);
             dsReports report=new dsReports();
             try
@@ -89,6 +91,37 @@ namespace SmatPOS
             frm.MainReport.LocalReport.ReportEmbeddedResource = "SmatPOS.rptchecksales.rdlc";
             frm.MainReport.LocalReport.DataSources.Clear();
             frm.MainReport.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", report.Tables["ViewSaleChecks"]));
+            ReportParameter[] rb = new ReportParameter[4];
+            rb[0] = new ReportParameter("From", _from.ToString("yyyy-MM-dd"));
+            rb[1] = new ReportParameter("To", _to.ToString("yyyy-MM-dd"));
+            rb[2] = new ReportParameter("restname", declarations.systemOptions["RestaruntName"].ToString());
+            byte[] imagebytes = (byte[])declarations.systemOptions["logo"];
+            rb[3] = new ReportParameter("Image", Convert.ToBase64String(imagebytes));
+            frm.MainReport.LocalReport.SetParameters(rb);
+            frm.ShowDialog();
+
+
+        }
+        public void PrintDetailedSalesReport(DateTime _from, DateTime _to)
+        {
+            string query = "select * from ViewSaledetailes where checkdate between '"
++ _from.ToString("yyyy-MM-dd") +
+"' and '" + _to.ToString("yyyy-MM-dd") + "'";
+            dataAdapter = new SqlDataAdapter(query, adoClass.sqlcon);
+            dsReports report = new dsReports();
+            report.EnforceConstraints = false;
+            try
+            {
+                dataAdapter.Fill(report.Tables["ViewSaledetailes"]);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error!!");
+            }
+            FormReports frm = new FormReports();
+            frm.MainReport.LocalReport.ReportEmbeddedResource = "SmatPOS.DetailedSalesReport.rdlc";
+            frm.MainReport.LocalReport.DataSources.Clear();
+            frm.MainReport.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", report.Tables["ViewSaledetailes"]));
             ReportParameter[] rb = new ReportParameter[4];
             rb[0] = new ReportParameter("From", _from.ToString("yyyy-MM-dd"));
             rb[1] = new ReportParameter("To", _to.ToString("yyyy-MM-dd"));

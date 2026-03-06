@@ -349,6 +349,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsChecks.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DetailedSalesReport.rdlc" />
     <EmbeddedResource Include="FormFilterDate.resx">
       <DependentUpon>FormFilterDate.cs</DependentUpon>
     </EmbeddedResource>

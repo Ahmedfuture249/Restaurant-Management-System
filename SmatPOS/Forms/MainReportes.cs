@@ -36,5 +36,15 @@ namespace SmatPOS.Forms
                 checks.PrintSaleReport(frm._From, frm._TO);
             }
         }
+
+        private void btnDetailedsalesrpt_Click(object sender, EventArgs e)
+        {
+            FormFilterDate frm = new FormFilterDate();
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                clsPrintChecks checks = new clsPrintChecks();
+                checks.PrintDetailedSalesReport(frm._From, frm._TO);
+            }
+        }
     }
 }
