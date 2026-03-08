@@ -69,8 +69,15 @@ namespace SmatPOS
             rb[2] = new ReportParameter("RestarauntName", declarations.systemOptions["RestaruntName"].ToString());
             byte[] imagebytes = (byte[])declarations.systemOptions["logo"];
             rb[3] = new ReportParameter("image", Convert.ToBase64String(imagebytes));
-            frm.MainReport.LocalReport.SetParameters(rb);
-            frm.ShowDialog();
+            LocalReport report = new LocalReport();
+            string path = Application.StartupPath + @"\Reports\rptCheck.rdlc";
+            report.ReportPath = path;
+            report.DataSources.Clear();
+            report.DataSources.Add(new ReportDataSource("DataSet1", checks.Tables["dtCheck"]));
+            report.SetParameters(rb);
+            PrinterClass.PrintToPrinter(report);    
+            //frm.MainReport.LocalReport.SetParameters(rb);
+            //frm.ShowDialog();
         }
         public  void PrintSaleReport(DateTime _from, DateTime _to)
         {

@@ -140,5 +140,11 @@ namespace SmatPOS
         {
 
         }
+
+        private void btnLanguage_Click(object sender, EventArgs e)
+        {
+            SwitchLangouge langouge = new SwitchLangouge("ar", typeof(MainForm));
+            langouge.SetLangouge(this.Controls);
+        }
     }
 }
