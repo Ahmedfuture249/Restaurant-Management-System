@@ -127,6 +127,10 @@ namespace SmatPOS.Forms
                 DataFillRow();
                 row.EndEdit();
             }
+            Update();
+        }
+        private void Update()
+        {
             try
             {
                 adoClass.Builder = new SqlCommandBuilder(adapter);
@@ -192,6 +196,17 @@ namespace SmatPOS.Forms
         private void toolStripBtnExit_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("confirm Delete ?", "Q", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                row.Delete();
+                Update();
+                LoadDataOfIndex(0);
+
+            }
         }
     }
 }
