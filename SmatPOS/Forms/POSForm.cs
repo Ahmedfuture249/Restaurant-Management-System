@@ -23,6 +23,33 @@ namespace SmatPOS.Forms
         private string checkID;
         private void btnPrint_Click(object sender, EventArgs e)
         {
+            double totalCheck = 0;
+            double totalPay = 0;
+            double.TryParse(txtTotal.Text, out totalCheck);
+            double.TryParse(txtTotal.Text, out totalPay);
+            if (totalCheck == 0)
+            {
+                MessageBox.Show("No items in the check");
+                return;
+            }
+            else if (totalPay == 0)
+            {
+                MessageBox.Show("Can't Pay Without Money");
+                return;
+            }
+            if (totalPay < totalCheck)
+            {
+                MessageBox.Show("The paymetn not enough");
+            }
+            if (comboBox1.Text == string.Empty)
+            {
+                MessageBox.Show("Please select the payment method");
+                return;
+            }
+
+            txtPaid.Text = totalPay.ToString();
+            txtchange.Text = (totalPay - totalCheck).ToString();
+            SaveCheck();
             if (checkID == "0")
             {
                 MessageBox.Show("Please save the check before print");
@@ -32,7 +59,12 @@ namespace SmatPOS.Forms
             { 
             clsPrintChecks checks = new clsPrintChecks();
             checks.printCheck(int.Parse(checkID));
+            checks.printorderCheck(int.Parse(checkID));
             }
+            txtItemQTY.Text = "0";
+            dgvItems.Rows.Clear();
+            CalculateCheck();
+
 
         }
 
@@ -130,6 +162,7 @@ namespace SmatPOS.Forms
                     x = 1;
                 }
                 totalPrice = x * ItemPrice;
+                
                 dgvItems.Rows.Add(new object[]
                 {
                     button.AccessibleDescription,
@@ -140,6 +173,7 @@ namespace SmatPOS.Forms
                     ,ItemPrice
                 }
                     );
+              
                 txtItemQTY.Text = "0";
             }
             else
@@ -303,6 +337,8 @@ namespace SmatPOS.Forms
         {
              adapter = new SqlDataAdapter("select * from checksItems", adoClass.sqlcon);
              _ItemDt = new DataTable();
+            int QTY = 0;
+            int PRICE = 0;
             {
                 try
                 {
@@ -314,8 +350,11 @@ namespace SmatPOS.Forms
                         row["checkID"] = int.Parse(checkID);
                         row["ItemID"] = dgvItems[ColID.Index, i].Value;
                         row["Quantity"] = dgvItems[colQTY.Index, i].Value;
-                        row["Price"] = dgvItems[ColPrice.Index, i].Value;
-                        row["totalprice"] = dgvItems[colItemprice.Index, i].Value;
+                        row["Price"] = dgvItems[colItemprice.Index, i].Value;
+                       
+                        row["totalprice"] =
+    Convert.ToDecimal(dgvItems[colItemprice.Index, i].Value) *
+    Convert.ToDecimal(dgvItems[colQTY.Index, i].Value);
                         _ItemDt.Rows.Add(row);
 
 
@@ -390,5 +429,5 @@ namespace SmatPOS.Forms
             txtchange.Text=(totalPay-totalCheck).ToString();
             SaveCheck();
         }
-        }
+    }
 }

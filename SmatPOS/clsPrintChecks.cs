@@ -60,22 +60,82 @@ namespace SmatPOS
                 }
             }
             FormReports frm = new FormReports();    
-            frm.MainReport.LocalReport.ReportEmbeddedResource = "SmatPOS.rptCheck.rdlc";
+            frm.MainReport.LocalReport.ReportEmbeddedResource = "SmatPOS.Report1.rdlc";
             frm.MainReport.LocalReport.DataSources.Clear();
             frm.MainReport.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", checks.Tables["dtCheck"]));
             ReportParameter[] rb = new ReportParameter[4];
-            rb[0]=new ReportParameter("Line1", declarations.systemOptions["ReceiptLine1"].ToString());
-            rb[1] = new ReportParameter("Line2", declarations.systemOptions["ReceiptLine2"].ToString());
-            rb[2] = new ReportParameter("RestarauntName", declarations.systemOptions["RestaruntName"].ToString());
-            byte[] imagebytes = (byte[])declarations.systemOptions["logo"];
-            rb[3] = new ReportParameter("image", Convert.ToBase64String(imagebytes));
+            //rb[0]=new ReportParameter("Line1", declarations.systemOptions["ReceiptLine1"].ToString());
+            //rb[1] = new ReportParameter("Line2", declarations.systemOptions["ReceiptLine2"].ToString());
+           // rb[2] = new ReportParameter("RestarauntName", declarations.systemOptions["RestaruntName"].ToString());
+           // byte[] imagebytes = (byte[])declarations.systemOptions["logo"];
+          //  rb[3] = new ReportParameter("image", Convert.ToBase64String(imagebytes));
             LocalReport report = new LocalReport();
-            string path = Application.StartupPath + @"\Reports\rptCheck.rdlc";
+            string path = Application.StartupPath + @"\Reports\Report1.rdlc";
             report.ReportPath = path;
             report.DataSources.Clear();
             report.DataSources.Add(new ReportDataSource("DataSet1", checks.Tables["dtCheck"]));
-            report.SetParameters(rb);
+           // report.SetParameters(rb);
             PrinterClass.PrintToPrinter(report);    
+            //frm.MainReport.LocalReport.SetParameters(rb);
+            //frm.ShowDialog();
+        }
+        public void printorderCheck(int CheckID)
+        {
+
+            cmd = new SqlCommand("SELECT * FROM viewChecks WHERE ID = @CheckID", adoClass.sqlcon);
+            cmd.Parameters.AddWithValue("@CheckID", CheckID);
+            dsChecks checks = new dsChecks();
+            try
+            {
+                if (adoClass.sqlcon.State != ConnectionState.Open) adoClass.sqlcon.Open();
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    DataRow dro = checks.Tables["dtCheck"].NewRow();
+                    dro["ID"] = dr["ID"];
+                    dro["CheckDate"] = dr["CheckDate"];
+                    dro["CheckTotal"] = dr["TotalCheck"];
+                    dro["ItemName"] = dr["Description"];
+                    dro["ItemQTY"] = dr["Quantity"];
+                    dro["ItemPrice"] = dr["Price"];
+                    dro["ItemTotalPrice"] = dr["TotalPrice"];
+                    dro["ItemID"] = dr["ItemID"];
+                    checks.Tables["dtCheck"].Rows.Add(dro);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred while printing the check: " + ex.Message);
+            }
+            finally
+            {
+                if (dr != null && !dr.IsClosed)
+                {
+                    dr.Close();
+                }
+                if (adoClass.sqlcon.State == ConnectionState.Open)
+                {
+                    adoClass.sqlcon.Close();
+                }
+            }
+            FormReports frm = new FormReports();
+            frm.MainReport.LocalReport.ReportEmbeddedResource = "SmatPOS.check2.rdlc";
+            frm.MainReport.LocalReport.DataSources.Clear();
+            frm.MainReport.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", checks.Tables["dtCheck"]));
+            ReportParameter[] rb = new ReportParameter[4];
+            //rb[0]=new ReportParameter("Line1", declarations.systemOptions["ReceiptLine1"].ToString());
+            //rb[1] = new ReportParameter("Line2", declarations.systemOptions["ReceiptLine2"].ToString());
+            // rb[2] = new ReportParameter("RestarauntName", declarations.systemOptions["RestaruntName"].ToString());
+            // byte[] imagebytes = (byte[])declarations.systemOptions["logo"];
+            //  rb[3] = new ReportParameter("image", Convert.ToBase64String(imagebytes));
+            LocalReport report = new LocalReport();
+            string path = Application.StartupPath + @"\Reports\check2.rdlc";
+            report.ReportPath = path;
+            report.DataSources.Clear();
+            report.DataSources.Add(new ReportDataSource("DataSet1", checks.Tables["dtCheck"]));
+            // report.SetParameters(rb);
+            PrinterClass.PrintToPrinter(report);
             //frm.MainReport.LocalReport.SetParameters(rb);
             //frm.ShowDialog();
         }
