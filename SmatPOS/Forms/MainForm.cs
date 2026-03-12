@@ -143,7 +143,13 @@ namespace SmatPOS
 
         private void btnLanguage_Click(object sender, EventArgs e)
         {
-            SwitchLangouge langouge = new SwitchLangouge("ar", typeof(MainForm));
+            SwitchLangouge langouge = new SwitchLangouge("Ar", typeof(MainForm));
+            langouge.SetLangouge(this.Controls);
+        }
+
+        private void btnChangLangToEnglish_Click(object sender, EventArgs e)
+        {
+            SwitchLangouge langouge = new SwitchLangouge("en", typeof(MainForm));
             langouge.SetLangouge(this.Controls);
         }
     }

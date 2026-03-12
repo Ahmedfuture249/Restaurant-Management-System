@@ -53,8 +53,9 @@
             // 
             // label1
             // 
+            this.label1.AccessibleName = "restname";
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 56);
+            this.label1.Location = new System.Drawing.Point(12, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 22);
             this.label1.TabIndex = 7;
@@ -62,24 +63,29 @@
             // 
             // label2
             // 
+            this.label2.AccessibleName = "restaddres1";
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(18, 99);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(156, 22);
             this.label2.TabIndex = 8;
             this.label2.Text = "Restaraunt Address1";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
+            this.label3.AccessibleName = "restaddress2";
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(18, 150);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(156, 22);
             this.label3.TabIndex = 9;
             this.label3.Text = "Restaraunt Address2";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
+            this.label4.AccessibleName = "Phone";
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(18, 197);
             this.label4.Name = "label4";
@@ -89,6 +95,7 @@
             // 
             // label5
             // 
+            this.label5.AccessibleName = "Printer";
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(18, 239);
             this.label5.Name = "label5";
@@ -98,6 +105,7 @@
             // 
             // label6
             // 
+            this.label6.AccessibleName = "Logo";
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(97, 465);
             this.label6.Name = "label6";
@@ -108,6 +116,7 @@
             // 
             // label7
             // 
+            this.label7.AccessibleName = "Receipt Line 1";
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(519, 57);
             this.label7.Name = "label7";
@@ -117,12 +126,13 @@
             // 
             // label8
             // 
+            this.label8.AccessibleName = "Receipt Line 2";
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(519, 95);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(108, 22);
             this.label8.TabIndex = 14;
-            this.label8.Text = "Receipt Line 1";
+            this.label8.Text = "Receipt Line 2";
             // 
             // txtRestName
             // 
@@ -202,6 +212,7 @@
             // 
             // btnSave
             // 
+            this.btnSave.AccessibleName = "Save";
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Image = global::SmatPOS.Properties.Resources.floppy_disk;
@@ -228,6 +239,7 @@
             // 
             // btnExit
             // 
+            this.btnExit.AccessibleName = "Exit";
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Image = global::SmatPOS.Properties.Resources.log_out;

@@ -51,6 +51,7 @@
             // 
             // btnItems
             // 
+            this.btnItems.AccessibleName = "SaleReport";
             this.btnItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnItems.Image = global::SmatPOS.Properties.Resources.business_report;
             this.btnItems.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -65,6 +66,7 @@
             // 
             // btnDetailedsalesrpt
             // 
+            this.btnDetailedsalesrpt.AccessibleName = "Detailedsalesrpt";
             this.btnDetailedsalesrpt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDetailedsalesrpt.Image = global::SmatPOS.Properties.Resources.business_report;
             this.btnDetailedsalesrpt.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -79,6 +81,7 @@
             // 
             // btnSalesbyCategories
             // 
+            this.btnSalesbyCategories.AccessibleName = "SalesbyCategories";
             this.btnSalesbyCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalesbyCategories.Image = global::SmatPOS.Properties.Resources.business_report;
             this.btnSalesbyCategories.ImageAlign = System.Drawing.ContentAlignment.TopCenter;

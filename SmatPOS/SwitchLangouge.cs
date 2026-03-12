@@ -14,6 +14,7 @@ namespace SmatPOS
         public SwitchLangouge(string Lang, Type t)
         {
             rm = new ResourceManager("SmatPOS.Languages.Language", t.Assembly);
+            culture=new CultureInfo(Lang);
         }
         ResourceManager rm;
         CultureInfo culture;

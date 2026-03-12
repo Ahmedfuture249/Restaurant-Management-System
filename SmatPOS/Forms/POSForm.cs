@@ -85,6 +85,8 @@ namespace SmatPOS.Forms
 
         private void POSForm_Load(object sender, EventArgs e)
         {
+            SwitchLangouge langouge = new SwitchLangouge("Ar", typeof(MainForm));
+            langouge.SetLangouge(this.Controls);
             clsHelper.fillComboBox(comboBox1, "select * from Payments");
             comboBox1.Text=clsHelper.getComboItemVal(comboBox1, "1");   
             FillCategories();

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtItemQTY = new System.Windows.Forms.TextBox();
             this.buttonC = new System.Windows.Forms.Button();
@@ -244,6 +244,7 @@
             // 
             // label1
             // 
+            this.label1.AccessibleName = "Total";
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 43);
@@ -255,7 +256,7 @@
             // txtTotal
             // 
             this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(80, 40);
+            this.txtTotal.Location = new System.Drawing.Point(135, 40);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(208, 34);
             this.txtTotal.TabIndex = 0;
@@ -286,16 +287,17 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(137, 45);
+            this.comboBox1.Location = new System.Drawing.Point(244, 43);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(208, 30);
             this.comboBox1.TabIndex = 8;
             // 
             // label2
             // 
+            this.label2.AccessibleName = "payment";
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(17, 46);
+            this.label2.Location = new System.Drawing.Point(17, 44);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 28);
             this.label2.TabIndex = 3;
@@ -304,13 +306,14 @@
             // txtPaid
             // 
             this.txtPaid.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPaid.Location = new System.Drawing.Point(137, 84);
+            this.txtPaid.Location = new System.Drawing.Point(244, 82);
             this.txtPaid.Name = "txtPaid";
             this.txtPaid.Size = new System.Drawing.Size(208, 34);
             this.txtPaid.TabIndex = 4;
             // 
             // label3
             // 
+            this.label3.AccessibleName = "Paid";
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(17, 87);
@@ -321,6 +324,7 @@
             // 
             // label4
             // 
+            this.label4.AccessibleName = "Change ";
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(17, 128);
@@ -332,13 +336,14 @@
             // txtchange
             // 
             this.txtchange.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtchange.Location = new System.Drawing.Point(137, 125);
+            this.txtchange.Location = new System.Drawing.Point(244, 126);
             this.txtchange.Name = "txtchange";
             this.txtchange.Size = new System.Drawing.Size(208, 34);
             this.txtchange.TabIndex = 6;
             // 
             // btncancel
             // 
+            this.btncancel.AccessibleName = "cancel";
             this.btncancel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncancel.Image = global::SmatPOS.Properties.Resources.cancel;
             this.btncancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -352,6 +357,7 @@
             // 
             // btnPay
             // 
+            this.btnPay.AccessibleName = "Pay";
             this.btnPay.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPay.Image = global::SmatPOS.Properties.Resources.money1;
             this.btnPay.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -366,6 +372,7 @@
             // 
             // btnExit
             // 
+            this.btnExit.AccessibleName = "Exit";
             this.btnExit.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Image = global::SmatPOS.Properties.Resources.log_out1;
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -380,6 +387,7 @@
             // 
             // btnPrint
             // 
+            this.btnPrint.AccessibleName = "Print";
             this.btnPrint.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.Image = global::SmatPOS.Properties.Resources.pos;
             this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -394,6 +402,7 @@
             // 
             // btnRemove
             // 
+            this.btnRemove.AccessibleName = "Remove";
             this.btnRemove.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemove.Image = global::SmatPOS.Properties.Resources.delete;
             this.btnRemove.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -408,6 +417,7 @@
             // 
             // btnClear
             // 
+            this.btnClear.AccessibleName = "Clear";
             this.btnClear.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.Image = global::SmatPOS.Properties.Resources.trash_can;
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -522,14 +532,14 @@
             this.dgvItems.AllowUserToAddRows = false;
             this.dgvItems.AllowUserToDeleteRows = false;
             this.dgvItems.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvItems.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvItems.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColID,
@@ -537,14 +547,14 @@
             this.colQTY,
             this.ColPrice,
             this.colItemprice});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvItems.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvItems.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvItems.Location = new System.Drawing.Point(12, 6);
             this.dgvItems.Name = "dgvItems";
             this.dgvItems.ReadOnly = true;

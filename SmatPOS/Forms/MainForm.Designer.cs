@@ -30,26 +30,27 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnMenu = new System.Windows.Forms.Panel();
-            this.pnlogo = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.linkLabelmyInfo = new System.Windows.Forms.LinkLabel();
-            this.pnlTitle = new System.Windows.Forms.Panel();
-            this.lblUser = new System.Windows.Forms.Label();
-            this.lblTime = new System.Windows.Forms.Label();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pnlMainForm = new System.Windows.Forms.Panel();
-            this.btnLanguage = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
             this.btnOptions = new System.Windows.Forms.Button();
             this.btnReporting = new System.Windows.Forms.Button();
             this.btnSetup = new System.Windows.Forms.Button();
             this.btnPOS = new System.Windows.Forms.Button();
+            this.pnlogo = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.linkLabelmyInfo = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnlTitle = new System.Windows.Forms.Panel();
+            this.btnChangLangToEnglish = new System.Windows.Forms.Button();
+            this.btnLanguage = new System.Windows.Forms.Button();
+            this.lblUser = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pnlMainForm = new System.Windows.Forms.Panel();
             this.pnMenu.SuspendLayout();
             this.pnlogo.SuspendLayout();
-            this.pnlTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlTitle.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnMenu
@@ -65,135 +66,6 @@
             this.pnMenu.Name = "pnMenu";
             this.pnMenu.Size = new System.Drawing.Size(261, 606);
             this.pnMenu.TabIndex = 0;
-            // 
-            // pnlogo
-            // 
-            this.pnlogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pnlogo.Controls.Add(this.label2);
-            this.pnlogo.Controls.Add(this.linkLabelmyInfo);
-            this.pnlogo.Controls.Add(this.pictureBox1);
-            this.pnlogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlogo.Location = new System.Drawing.Point(0, 0);
-            this.pnlogo.Name = "pnlogo";
-            this.pnlogo.Size = new System.Drawing.Size(261, 102);
-            this.pnlogo.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(115, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 25);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Smart POS";
-            // 
-            // linkLabelmyInfo
-            // 
-            this.linkLabelmyInfo.AutoSize = true;
-            this.linkLabelmyInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabelmyInfo.LinkColor = System.Drawing.Color.Yellow;
-            this.linkLabelmyInfo.Location = new System.Drawing.Point(116, 62);
-            this.linkLabelmyInfo.Name = "linkLabelmyInfo";
-            this.linkLabelmyInfo.Size = new System.Drawing.Size(124, 22);
-            this.linkLabelmyInfo.TabIndex = 1;
-            this.linkLabelmyInfo.TabStop = true;
-            this.linkLabelmyInfo.Text = "Eng : Ahmed";
-            // 
-            // pnlTitle
-            // 
-            this.pnlTitle.BackColor = System.Drawing.Color.Gray;
-            this.pnlTitle.Controls.Add(this.btnLanguage);
-            this.pnlTitle.Controls.Add(this.lblUser);
-            this.pnlTitle.Controls.Add(this.btnExit);
-            this.pnlTitle.Controls.Add(this.lblTime);
-            this.pnlTitle.Controls.Add(this.lblTitle);
-            this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTitle.Location = new System.Drawing.Point(261, 0);
-            this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(917, 102);
-            this.pnlTitle.TabIndex = 1;
-            this.pnlTitle.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTitle_Paint);
-            // 
-            // lblUser
-            // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.ForeColor = System.Drawing.Color.White;
-            this.lblUser.Location = new System.Drawing.Point(15, 59);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(49, 20);
-            this.lblUser.TabIndex = 7;
-            this.lblUser.Text = "User";
-            // 
-            // lblTime
-            // 
-            this.lblTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTime.AutoSize = true;
-            this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.ForeColor = System.Drawing.Color.White;
-            this.lblTime.Location = new System.Drawing.Point(683, 12);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblTime.Size = new System.Drawing.Size(85, 29);
-            this.lblTime.TabIndex = 1;
-            this.lblTime.Text = "label2";
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(15, 22);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(140, 25);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Point Of Sale";
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // pnlMainForm
-            // 
-            this.pnlMainForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMainForm.Location = new System.Drawing.Point(261, 102);
-            this.pnlMainForm.Name = "pnlMainForm";
-            this.pnlMainForm.Size = new System.Drawing.Size(917, 504);
-            this.pnlMainForm.TabIndex = 2;
-            this.pnlMainForm.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMainForm_Paint);
-            // 
-            // btnLanguage
-            // 
-            this.btnLanguage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLanguage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLanguage.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLanguage.Location = new System.Drawing.Point(742, 47);
-            this.btnLanguage.Name = "btnLanguage";
-            this.btnLanguage.Size = new System.Drawing.Size(83, 52);
-            this.btnLanguage.TabIndex = 8;
-            this.btnLanguage.Text = "ع";
-            this.btnLanguage.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnLanguage.UseVisualStyleBackColor = true;
-            this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExit.BackgroundImage = global::SmatPOS.Properties.Resources.exit;
-            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnExit.Location = new System.Drawing.Point(831, 47);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(83, 52);
-            this.btnExit.TabIndex = 6;
-            this.btnExit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnOptions
             // 
@@ -275,6 +147,41 @@
             this.btnPOS.UseVisualStyleBackColor = false;
             this.btnPOS.Click += new System.EventHandler(this.btnPOS_Click);
             // 
+            // pnlogo
+            // 
+            this.pnlogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnlogo.Controls.Add(this.label2);
+            this.pnlogo.Controls.Add(this.linkLabelmyInfo);
+            this.pnlogo.Controls.Add(this.pictureBox1);
+            this.pnlogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlogo.Location = new System.Drawing.Point(0, 0);
+            this.pnlogo.Name = "pnlogo";
+            this.pnlogo.Size = new System.Drawing.Size(261, 102);
+            this.pnlogo.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(115, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(121, 25);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Smart POS";
+            // 
+            // linkLabelmyInfo
+            // 
+            this.linkLabelmyInfo.AutoSize = true;
+            this.linkLabelmyInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelmyInfo.LinkColor = System.Drawing.Color.Yellow;
+            this.linkLabelmyInfo.Location = new System.Drawing.Point(116, 62);
+            this.linkLabelmyInfo.Name = "linkLabelmyInfo";
+            this.linkLabelmyInfo.Size = new System.Drawing.Size(124, 22);
+            this.linkLabelmyInfo.TabIndex = 1;
+            this.linkLabelmyInfo.TabStop = true;
+            this.linkLabelmyInfo.Text = "Eng : Ahmed";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SmatPOS.Properties.Resources.fast_food;
@@ -284,6 +191,118 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // pnlTitle
+            // 
+            this.pnlTitle.BackColor = System.Drawing.Color.Gray;
+            this.pnlTitle.Controls.Add(this.btnChangLangToEnglish);
+            this.pnlTitle.Controls.Add(this.btnLanguage);
+            this.pnlTitle.Controls.Add(this.lblUser);
+            this.pnlTitle.Controls.Add(this.btnExit);
+            this.pnlTitle.Controls.Add(this.lblTime);
+            this.pnlTitle.Controls.Add(this.lblTitle);
+            this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTitle.Location = new System.Drawing.Point(261, 0);
+            this.pnlTitle.Name = "pnlTitle";
+            this.pnlTitle.Size = new System.Drawing.Size(917, 102);
+            this.pnlTitle.TabIndex = 1;
+            this.pnlTitle.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTitle_Paint);
+            // 
+            // btnChangLangToEnglish
+            // 
+            this.btnChangLangToEnglish.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnChangLangToEnglish.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnChangLangToEnglish.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChangLangToEnglish.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnChangLangToEnglish.Location = new System.Drawing.Point(653, 47);
+            this.btnChangLangToEnglish.Name = "btnChangLangToEnglish";
+            this.btnChangLangToEnglish.Size = new System.Drawing.Size(83, 52);
+            this.btnChangLangToEnglish.TabIndex = 9;
+            this.btnChangLangToEnglish.Text = "E";
+            this.btnChangLangToEnglish.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnChangLangToEnglish.UseVisualStyleBackColor = true;
+            this.btnChangLangToEnglish.Click += new System.EventHandler(this.btnChangLangToEnglish_Click);
+            // 
+            // btnLanguage
+            // 
+            this.btnLanguage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLanguage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLanguage.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnLanguage.Location = new System.Drawing.Point(742, 47);
+            this.btnLanguage.Name = "btnLanguage";
+            this.btnLanguage.Size = new System.Drawing.Size(83, 52);
+            this.btnLanguage.TabIndex = 8;
+            this.btnLanguage.Text = "ع";
+            this.btnLanguage.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnLanguage.UseVisualStyleBackColor = true;
+            this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click);
+            // 
+            // lblUser
+            // 
+            this.lblUser.AccessibleName = "User";
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.ForeColor = System.Drawing.Color.White;
+            this.lblUser.Location = new System.Drawing.Point(15, 59);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(49, 20);
+            this.lblUser.TabIndex = 7;
+            this.lblUser.Text = "User";
+            // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.BackgroundImage = global::SmatPOS.Properties.Resources.exit;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnExit.Location = new System.Drawing.Point(831, 47);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(83, 52);
+            this.btnExit.TabIndex = 6;
+            this.btnExit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // lblTime
+            // 
+            this.lblTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.ForeColor = System.Drawing.Color.White;
+            this.lblTime.Location = new System.Drawing.Point(683, 12);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblTime.Size = new System.Drawing.Size(85, 29);
+            this.lblTime.TabIndex = 1;
+            this.lblTime.Text = "label2";
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AccessibleName = "PointOfSale";
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(15, 22);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(140, 25);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "Point Of Sale";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // pnlMainForm
+            // 
+            this.pnlMainForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMainForm.Location = new System.Drawing.Point(261, 102);
+            this.pnlMainForm.Name = "pnlMainForm";
+            this.pnlMainForm.Size = new System.Drawing.Size(917, 504);
+            this.pnlMainForm.TabIndex = 2;
+            this.pnlMainForm.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMainForm_Paint);
             // 
             // MainForm
             // 
@@ -300,9 +319,9 @@
             this.pnMenu.ResumeLayout(false);
             this.pnlogo.ResumeLayout(false);
             this.pnlogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -326,6 +345,7 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Button btnLanguage;
+        private System.Windows.Forms.Button btnChangLangToEnglish;
     }
 }
 
