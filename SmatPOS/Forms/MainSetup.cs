@@ -55,6 +55,8 @@ namespace SmatPOS.Forms
 
         private void MainSetup_Load(object sender, EventArgs e)
         {
+            SwitchLangouge langouge = new SwitchLangouge(declarations.Lang, typeof(MainForm));
+            langouge.SetLangouge(this.Controls); 
             clsHelper.LoadPermissions(this.Controls, "SetUp");
         }
     }

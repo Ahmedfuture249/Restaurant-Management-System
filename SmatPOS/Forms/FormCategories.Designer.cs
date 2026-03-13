@@ -30,19 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCategories));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.txtDes = new System.Windows.Forms.TextBox();
-            this.lblDes = new System.Windows.Forms.Label();
             this.toolStripBtnSelect = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripBtnNew = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnSve = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnFirst = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnBack = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnNext = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnLast = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripBtnExit = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.txtDes = new System.Windows.Forms.TextBox();
+            this.lblDes = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,41 +67,9 @@
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 73);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 73);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 73);
-            // 
-            // txtDes
-            // 
-            this.txtDes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDes.Location = new System.Drawing.Point(405, 136);
-            this.txtDes.Name = "txtDes";
-            this.txtDes.Size = new System.Drawing.Size(246, 30);
-            this.txtDes.TabIndex = 3;
-            // 
-            // lblDes
-            // 
-            this.lblDes.AutoSize = true;
-            this.lblDes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDes.Location = new System.Drawing.Point(275, 134);
-            this.lblDes.Name = "lblDes";
-            this.lblDes.Size = new System.Drawing.Size(111, 22);
-            this.lblDes.TabIndex = 2;
-            this.lblDes.Text = "Description";
-            // 
             // toolStripBtnSelect
             // 
+            this.toolStripBtnSelect.AccessibleName = "Select";
             this.toolStripBtnSelect.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnSelect.Image")));
             this.toolStripBtnSelect.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtnSelect.Name = "toolStripBtnSelect";
@@ -110,8 +78,14 @@
             this.toolStripBtnSelect.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripBtnSelect.Click += new System.EventHandler(this.toolStripBtnSelect_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 73);
+            // 
             // toolStripBtnNew
             // 
+            this.toolStripBtnNew.AccessibleName = "New";
             this.toolStripBtnNew.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnNew.Image")));
             this.toolStripBtnNew.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtnNew.Name = "toolStripBtnNew";
@@ -132,6 +106,7 @@
             // 
             // toolStripBtnFirst
             // 
+            this.toolStripBtnFirst.AccessibleName = "First";
             this.toolStripBtnFirst.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnFirst.Image")));
             this.toolStripBtnFirst.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtnFirst.Name = "toolStripBtnFirst";
@@ -142,6 +117,7 @@
             // 
             // toolStripBtnBack
             // 
+            this.toolStripBtnBack.AccessibleName = "Back";
             this.toolStripBtnBack.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnBack.Image")));
             this.toolStripBtnBack.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtnBack.Name = "toolStripBtnBack";
@@ -162,6 +138,7 @@
             // 
             // toolStripBtnLast
             // 
+            this.toolStripBtnLast.AccessibleName = "Last";
             this.toolStripBtnLast.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnLast.Image")));
             this.toolStripBtnLast.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtnLast.Name = "toolStripBtnLast";
@@ -169,6 +146,11 @@
             this.toolStripBtnLast.Text = "Last";
             this.toolStripBtnLast.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripBtnLast.Click += new System.EventHandler(this.toolStripBtnLast_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 73);
             // 
             // toolStripBtnExit
             // 
@@ -180,6 +162,31 @@
             this.toolStripBtnExit.Text = "Exit";
             this.toolStripBtnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripBtnExit.Click += new System.EventHandler(this.toolStripBtnExit_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 73);
+            // 
+            // txtDes
+            // 
+            this.txtDes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDes.Location = new System.Drawing.Point(405, 136);
+            this.txtDes.Name = "txtDes";
+            this.txtDes.Size = new System.Drawing.Size(246, 30);
+            this.txtDes.TabIndex = 3;
+            // 
+            // lblDes
+            // 
+            this.lblDes.AccessibleName = "Description";
+            this.lblDes.AutoSize = true;
+            this.lblDes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDes.Location = new System.Drawing.Point(275, 134);
+            this.lblDes.Name = "lblDes";
+            this.lblDes.Size = new System.Drawing.Size(111, 22);
+            this.lblDes.TabIndex = 2;
+            this.lblDes.Text = "Description";
+            this.lblDes.Click += new System.EventHandler(this.lblDes_Click);
             // 
             // FormCategories
             // 

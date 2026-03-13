@@ -25,6 +25,8 @@ namespace SmatPOS.Forms
 
         private void FormUsers_Load(object sender, EventArgs e)
         {
+            SwitchLangouge langouge = new SwitchLangouge(declarations.Lang, typeof(MainForm));
+            langouge.SetLangouge(this.Controls); 
             adapter = new SqlDataAdapter("Select  * from Users", adoClass.sqlcon);
             dataTable = new DataTable();
             adapter.Fill(dataTable);

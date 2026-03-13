@@ -23,6 +23,8 @@ namespace SmatPOS.Forms
         private int Index;
         private void FormItems_Load(object sender, EventArgs e)
         {
+            SwitchLangouge langouge = new SwitchLangouge(declarations.Lang, typeof(MainForm));
+            langouge.SetLangouge(this.Controls); 
             clsHelper.fillComboBox(comboBoxCategories, "Select ID,Description from categories");
             adapter = new SqlDataAdapter("Select  * from Items", adoClass.sqlcon);
             dataTable = new DataTable();
@@ -219,6 +221,11 @@ namespace SmatPOS.Forms
                 txtImagePath.Text = openFileDialog.FileName;
                 pictureBoXImage.BackgroundImage = new Bitmap(txtImagePath.Text);
             }
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

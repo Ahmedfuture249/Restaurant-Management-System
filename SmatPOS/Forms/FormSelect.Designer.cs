@@ -38,6 +38,7 @@
             // 
             // lblDes
             // 
+            this.lblDes.AccessibleName = "Description";
             this.lblDes.AutoSize = true;
             this.lblDes.Location = new System.Drawing.Point(22, 21);
             this.lblDes.Name = "lblDes";

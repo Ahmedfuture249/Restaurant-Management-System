@@ -24,6 +24,8 @@ namespace SmatPOS.Forms
 
         private void FormCategories_Load(object sender, EventArgs e)
         {
+            SwitchLangouge langouge = new SwitchLangouge(declarations.Lang, typeof(MainForm));
+            langouge.SetLangouge(this.Controls);
             adapter = new SqlDataAdapter("Select  * from categories", adoClass.sqlcon);
             dataTable = new DataTable();
             adapter.Fill(dataTable);
@@ -168,6 +170,11 @@ namespace SmatPOS.Forms
         private void toolStripBtnExit_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void lblDes_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

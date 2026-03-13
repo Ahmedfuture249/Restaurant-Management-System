@@ -31,6 +31,8 @@ namespace SmatPOS.Forms
 
         private void MainOptions_Load(object sender, EventArgs e)
         {
+            SwitchLangouge langouge = new SwitchLangouge(declarations.Lang, typeof(MainForm));
+            langouge.SetLangouge(this.Controls); 
             adoClass.SetConnection();
             adapter = new SqlDataAdapter("SELECT Top 1 * FROM Optiones", adoClass.sqlcon);
 

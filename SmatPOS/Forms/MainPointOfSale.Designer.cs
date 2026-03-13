@@ -71,6 +71,7 @@
             this.Controls.Add(this.btnPOS);
             this.Name = "MainPointOfSale";
             this.Text = "MainPointOfSale";
+            this.Load += new System.EventHandler(this.MainPointOfSale_Load);
             this.ResumeLayout(false);
 
         }

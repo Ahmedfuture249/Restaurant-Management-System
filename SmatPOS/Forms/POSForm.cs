@@ -6,8 +6,10 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace SmatPOS.Forms
 {
@@ -82,10 +84,11 @@ namespace SmatPOS.Forms
         {
 
         }
-
+      
         private void POSForm_Load(object sender, EventArgs e)
         {
-            SwitchLangouge langouge = new SwitchLangouge("Ar", typeof(MainForm));
+           
+            SwitchLangouge langouge = new SwitchLangouge(declarations.Lang, typeof(MainForm));
             langouge.SetLangouge(this.Controls);
             clsHelper.fillComboBox(comboBox1, "select * from Payments");
             comboBox1.Text=clsHelper.getComboItemVal(comboBox1, "1");   

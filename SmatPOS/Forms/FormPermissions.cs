@@ -23,6 +23,8 @@ namespace SmatPOS.Forms
         private int counter = 1;
         private void FormPermissions_Load(object sender, EventArgs e)
         {
+            SwitchLangouge langouge = new SwitchLangouge(declarations.Lang, typeof(MainForm));
+            langouge.SetLangouge(this.Controls); 
             clsHelper.fillComboBox(comboBoxUsers, "SELECT * FROM USERS");
         }
 
@@ -184,6 +186,11 @@ namespace SmatPOS.Forms
             CheckAll(this.Controls,false);
             string userID = ((comboItem)comboBoxUsers.SelectedItem).Id;
             fillDataPermission(userID);
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
 
         }
     }

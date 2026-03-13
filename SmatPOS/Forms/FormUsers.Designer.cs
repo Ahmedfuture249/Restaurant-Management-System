@@ -33,6 +33,7 @@
             this.toolStripBtnSelect = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripBtnNew = new System.Windows.Forms.ToolStripButton();
+            this.btnDelete = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnSve = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnFirst = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnBack = new System.Windows.Forms.ToolStripButton();
@@ -53,7 +54,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnDelete = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -103,6 +103,16 @@
             this.toolStripBtnNew.Text = "New";
             this.toolStripBtnNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripBtnNew.Click += new System.EventHandler(this.toolStripBtnNew_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Image = global::SmatPOS.Properties.Resources.delete;
+            this.btnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(57, 70);
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // toolStripBtnSve
             // 
@@ -227,6 +237,7 @@
             // 
             // label8
             // 
+            this.label8.AccessibleName = "Phone";
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(520, 187);
             this.label8.Name = "label8";
@@ -236,6 +247,7 @@
             // 
             // label7
             // 
+            this.label7.AccessibleName = "Email";
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(520, 149);
             this.label7.Name = "label7";
@@ -245,6 +257,7 @@
             // 
             // label3
             // 
+            this.label3.AccessibleName = "FullName";
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(15, 242);
             this.label3.Name = "label3";
@@ -255,6 +268,7 @@
             // 
             // label2
             // 
+            this.label2.AccessibleName = "Password";
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(15, 191);
             this.label2.Name = "label2";
@@ -264,6 +278,7 @@
             // 
             // label1
             // 
+            this.label1.AccessibleName = "User Name";
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(15, 148);
             this.label1.Name = "label1";
@@ -273,22 +288,13 @@
             // 
             // label4
             // 
+            this.label4.AccessibleName = "Job Description";
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(15, 290);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 16);
             this.label4.TabIndex = 33;
             this.label4.Text = "Job Description";
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Image = global::SmatPOS.Properties.Resources.delete;
-            this.btnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(57, 70);
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // FormUsers
             // 

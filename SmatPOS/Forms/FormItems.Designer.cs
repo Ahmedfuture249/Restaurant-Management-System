@@ -41,7 +41,7 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripBtnExit = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.label4 = new System.Windows.Forms.Label();
+            this.Notes = new System.Windows.Forms.Label();
             this.txtImagePath = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.txtNotes = new System.Windows.Forms.TextBox();
@@ -174,15 +174,16 @@
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 73);
             // 
-            // label4
+            // Notes
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(82, 285);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 21);
-            this.label4.TabIndex = 45;
-            this.label4.Text = "Notes";
+            this.Notes.AccessibleName = "Notes";
+            this.Notes.AutoSize = true;
+            this.Notes.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Notes.Location = new System.Drawing.Point(82, 285);
+            this.Notes.Name = "Notes";
+            this.Notes.Size = new System.Drawing.Size(60, 21);
+            this.Notes.TabIndex = 45;
+            this.Notes.Text = "Notes";
             // 
             // txtImagePath
             // 
@@ -226,6 +227,7 @@
             // 
             // label8
             // 
+            this.label8.AccessibleName = "Image";
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(92, 433);
@@ -233,9 +235,11 @@
             this.label8.Size = new System.Drawing.Size(65, 21);
             this.label8.TabIndex = 38;
             this.label8.Text = "Image";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label3
             // 
+            this.label3.AccessibleName = "Price";
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(82, 225);
@@ -246,6 +250,7 @@
             // 
             // label2
             // 
+            this.label2.AccessibleName = "Categorey";
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(82, 186);
@@ -256,6 +261,7 @@
             // 
             // label1
             // 
+            this.label1.AccessibleName = "Description";
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(82, 143);
@@ -297,13 +303,14 @@
             // 
             // FormItems
             // 
+            this.AccessibleName = "Price";
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 511);
             this.Controls.Add(this.pictureBoXImage);
             this.Controls.Add(this.comboBoxCategories);
             this.Controls.Add(this.btnChoseImage);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.Notes);
             this.Controls.Add(this.txtImagePath);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.txtNotes);
@@ -338,7 +345,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton toolStripBtnExit;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label Notes;
         private System.Windows.Forms.TextBox txtImagePath;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.TextBox txtNotes;

@@ -26,6 +26,8 @@ namespace SmatPOS
 
         private void FormPayments_Load(object sender, EventArgs e)
         {
+            SwitchLangouge langouge = new SwitchLangouge(declarations.Lang, typeof(MainForm));
+            langouge.SetLangouge(this.Controls);
             adapter = new SqlDataAdapter("Select  * from Payments", adoClass.sqlcon);
             dataTable = new DataTable();
             adapter.Fill(dataTable);

@@ -28,5 +28,12 @@ namespace SmatPOS
             POSForm frm= new POSForm();
             frm.ShowDialog();
         }
+
+        private void MainPointOfSale_Load(object sender, EventArgs e)
+        {
+            SwitchLangouge langouge = new SwitchLangouge(declarations.Lang, typeof(MainForm));
+            langouge.SetLangouge(this.Controls);
+
+        }
     }
 }

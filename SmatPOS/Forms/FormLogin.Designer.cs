@@ -58,6 +58,7 @@
             // 
             // btnOk
             // 
+            this.btnOk.AccessibleName = "Ok";
             this.btnOk.BackColor = System.Drawing.Color.FloralWhite;
             this.btnOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOk.Image = global::SmatPOS.Properties.Resources.key;
@@ -73,6 +74,7 @@
             // 
             // btnClose
             // 
+            this.btnClose.AccessibleName = "Close";
             this.btnClose.BackColor = System.Drawing.Color.FloralWhite;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Image = global::SmatPOS.Properties.Resources.log_out1;
@@ -88,6 +90,7 @@
             // 
             // lblPassword
             // 
+            this.lblPassword.AccessibleName = "Password";
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.Location = new System.Drawing.Point(94, 192);
@@ -95,9 +98,11 @@
             this.lblPassword.Size = new System.Drawing.Size(106, 25);
             this.lblPassword.TabIndex = 4;
             this.lblPassword.Text = "Password";
+            this.lblPassword.Click += new System.EventHandler(this.lblPassword_Click);
             // 
             // lblUserName
             // 
+            this.lblUserName.AccessibleName = "User Name";
             this.lblUserName.AutoSize = true;
             this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserName.Location = new System.Drawing.Point(94, 132);
@@ -109,7 +114,7 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(237, 204);
+            this.txtPassword.Location = new System.Drawing.Point(237, 189);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(253, 30);
             this.txtPassword.TabIndex = 2;

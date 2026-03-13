@@ -163,5 +163,10 @@ namespace SmatPOS
                 btnOk.PerformClick();
             }
         }
+
+        private void lblPassword_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

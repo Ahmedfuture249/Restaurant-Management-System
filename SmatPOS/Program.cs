@@ -1,4 +1,5 @@
-﻿using SmatPOS.Forms;
+﻿using Microsoft.Identity.Client;
+using SmatPOS.Forms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,8 @@ namespace SmatPOS
         [STAThread]
         static void Main()
         {
+       
+            
             
             adoClass.SetConnection();
             Application.SetCompatibleTextRenderingDefault(false);

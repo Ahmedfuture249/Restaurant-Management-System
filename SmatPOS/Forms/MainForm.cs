@@ -23,6 +23,9 @@ namespace SmatPOS
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            declarations.Lang = "Ar";
+            SwitchLangouge langouge = new SwitchLangouge(declarations.Lang, typeof(MainForm));
+            langouge.SetLangouge(this.Controls);
             lblTime.Text = DateTime.Now.ToString();
             this.ControlBox = false;
             this.Text = string.Empty;
@@ -143,8 +146,20 @@ namespace SmatPOS
 
         private void btnLanguage_Click(object sender, EventArgs e)
         {
-            SwitchLangouge langouge = new SwitchLangouge("Ar", typeof(MainForm));
-            langouge.SetLangouge(this.Controls);
+            if (string.IsNullOrEmpty(btnLanguage.AccessibleDescription))
+            {
+                declarations.Lang = "Ar";
+                btnLanguage.AccessibleDescription = "Ar";
+                SwitchLangouge langouge = new SwitchLangouge("Ar", typeof(MainForm));
+                langouge.SetLangouge(this.Controls);
+            }
+            else
+            {
+                declarations.Lang = "en";
+                btnLanguage.AccessibleDescription = "";
+                SwitchLangouge langouge = new SwitchLangouge("en", typeof(MainForm));
+                langouge.SetLangouge(this.Controls);
+            }
         }
 
         private void btnChangLangToEnglish_Click(object sender, EventArgs e)

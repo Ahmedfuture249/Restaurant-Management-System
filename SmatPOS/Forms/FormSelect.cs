@@ -46,6 +46,8 @@ namespace SmatPOS.Forms
 
         private void FormSelect_Load(object sender, EventArgs e)
         {
+            SwitchLangouge langouge = new SwitchLangouge(declarations.Lang, typeof(MainForm));
+            langouge.SetLangouge(this.Controls); 
             adapter = new SqlDataAdapter(selectText, adoClass.sqlcon);
             dataTable = new DataTable();
             try

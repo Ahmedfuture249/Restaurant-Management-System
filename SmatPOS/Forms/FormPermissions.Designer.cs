@@ -48,7 +48,6 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.checkBoxTaples = new System.Windows.Forms.CheckBox();
             this.checkBoxUserPermissions = new System.Windows.Forms.CheckBox();
@@ -113,6 +112,7 @@
             // 
             // btnCheckAll
             // 
+            this.btnCheckAll.AccessibleName = "CheckAll";
             this.btnCheckAll.Image = ((System.Drawing.Image)(resources.GetObject("btnCheckAll.Image")));
             this.btnCheckAll.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCheckAll.Name = "btnCheckAll";
@@ -123,6 +123,7 @@
             // 
             // btnRemoveAll
             // 
+            this.btnRemoveAll.AccessibleName = "RemoveAll";
             this.btnRemoveAll.Image = ((System.Drawing.Image)(resources.GetObject("btnRemoveAll.Image")));
             this.btnRemoveAll.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnRemoveAll.Name = "btnRemoveAll";
@@ -155,6 +156,7 @@
             // 
             // label1
             // 
+            this.label1.AccessibleName = "User";
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(36, 99);
@@ -230,6 +232,7 @@
             // 
             // tabControl1
             // 
+            this.tabControl1.AccessibleName = "PointOfSale";
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
@@ -242,9 +245,9 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.AccessibleName = "PointOfSale";
             this.tabPage1.Controls.Add(this.checkBox1);
             this.tabPage1.Controls.Add(this.checkBox2);
-            this.tabPage1.Controls.Add(this.checkBox3);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -252,6 +255,7 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "point Of Sale";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // checkBox1
             // 
@@ -279,21 +283,9 @@
             this.checkBox2.Text = "Point of Sale Checks";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
-            // 
-            this.checkBox3.AccessibleDescription = "PointOfSale";
-            this.checkBox3.AccessibleName = "OpenChecks";
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.Location = new System.Drawing.Point(6, 47);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(132, 24);
-            this.checkBox3.TabIndex = 10;
-            this.checkBox3.Text = "Open Checks";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
             // tabPage2
             // 
+            this.tabPage2.AccessibleName = "SetUp";
             this.tabPage2.Controls.Add(this.checkBoxTaples);
             this.tabPage2.Controls.Add(this.checkBoxUserPermissions);
             this.tabPage2.Controls.Add(this.checkBoxItems);
@@ -388,6 +380,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.AccessibleName = "Reports";
             this.tabPage3.Controls.Add(this.checkBoxSalesReport);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
@@ -412,6 +405,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.AccessibleName = "Options";
             this.tabPage4.Controls.Add(this.checkBoxSave);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
@@ -495,7 +489,6 @@
         private System.Windows.Forms.CheckBox checkBoxSave;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBoxPayments;
         private System.Windows.Forms.CheckBox checkBoxUsers;
         private System.Windows.Forms.CheckBox checkBoxCategories;
