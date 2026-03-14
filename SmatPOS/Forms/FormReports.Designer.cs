@@ -33,21 +33,21 @@
             // 
             // MainReport
             // 
-            this.MainReport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.MainReport.Location = new System.Drawing.Point(0, 0);
             this.MainReport.Name = "MainReport";
             this.MainReport.ServerReport.BearerToken = null;
-            this.MainReport.Size = new System.Drawing.Size(800, 450);
+            this.MainReport.Size = new System.Drawing.Size(855, 468);
             this.MainReport.TabIndex = 0;
             // 
             // FormReports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(867, 480);
             this.Controls.Add(this.MainReport);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "FormReports";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

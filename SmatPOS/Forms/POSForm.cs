@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics.PerformanceData;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace SmatPOS.Forms
 {
     public partial class POSForm : Form
     {
+        private int counter;
         public POSForm()
         {
             InitializeComponent();
@@ -25,6 +27,7 @@ namespace SmatPOS.Forms
         private string checkID;
         private void btnPrint_Click(object sender, EventArgs e)
         {
+            string TapleNo="";
             double totalCheck = 0;
             double totalPay = 0;
             double.TryParse(txtTotal.Text, out totalCheck);
@@ -48,9 +51,15 @@ namespace SmatPOS.Forms
                 MessageBox.Show("Please select the payment method");
                 return;
             }
+           
+            if(txtTapleNo.Text=="")
+            {
+                txtTapleNo.Text = "TA";
+            }
 
             txtPaid.Text = totalPay.ToString();
             txtchange.Text = (totalPay - totalCheck).ToString();
+            TapleNo = txtTapleNo.Text;
             SaveCheck();
             if (checkID == "0")
             {
@@ -60,8 +69,9 @@ namespace SmatPOS.Forms
             else
             { 
             clsPrintChecks checks = new clsPrintChecks();
-            checks.printCheck(int.Parse(checkID));
-            checks.printorderCheck(int.Parse(checkID));
+                //checks.printCheck(int.Parse(checkID), counter);
+                //checks.printorderCheck(int.Parse(checkID), counter);
+                checks.printCheckForBigRest(int.Parse(checkID), counter,TapleNo);
             }
             txtItemQTY.Text = "0";
             dgvItems.Rows.Clear();
@@ -306,7 +316,8 @@ namespace SmatPOS.Forms
         }
         private void SaveCheck()
         {
-            string insertSgl = "insert into Checks(CheckDate,userID,TotalCheck,Status) values(@CheckDate,@userID,@TotalCheck,@Status)";
+            counter = getCheckNumber();
+            string insertSgl = "insert into Checks(CheckDate,userID,TotalCheck,Status,ChecksPerDayCounter) values(@CheckDate,@userID,@TotalCheck,@Status,@ChecksPerDayCounter)";
             insertSgl += "select @CheckID= SCOPE_IDENTITY();";
             SqlCommand sqlCommand = new SqlCommand(insertSgl, adoClass.sqlcon);
             sqlCommand.Parameters.Add("@CheckDate", SqlDbType.DateTime);
@@ -314,6 +325,7 @@ namespace SmatPOS.Forms
             sqlCommand.Parameters.Add("@TotalCheck", SqlDbType.Decimal);
             sqlCommand.Parameters.Add("@Status", SqlDbType.VarChar);
             sqlCommand.Parameters.Add("@CheckID", SqlDbType.Int);
+            sqlCommand.Parameters.Add("@ChecksPerDayCounter", SqlDbType.Int);
             try
             {
                 sqlCommand.Parameters["@CheckDate"].Value= DateTime.Now;
@@ -321,12 +333,14 @@ namespace SmatPOS.Forms
                 sqlCommand.Parameters["@TotalCheck"].Value= double.Parse(txtTotal.Text);
                 sqlCommand.Parameters["@Status"].Value = "Close"    ;
                 sqlCommand.Parameters["@CheckID"].Direction  = ParameterDirection.Output;
-                 if(adoClass.sqlcon.State!=ConnectionState.Open)
+                sqlCommand.Parameters["@ChecksPerDayCounter"].Value = counter;
+                if (adoClass.sqlcon.State!=ConnectionState.Open)
                 {
                     adoClass.sqlcon.Open(); 
                 }
                 sqlCommand.ExecuteNonQuery();   
                  checkID = sqlCommand.Parameters["@CheckID"].Value.ToString();
+
                 this.Text += ":ID : " + checkID + " : ";
                 SaveDataItems(checkID);
                 SaveDataIPayments(checkID);
@@ -336,6 +350,34 @@ namespace SmatPOS.Forms
                 MessageBox.Show(ex.Message);
 
             }
+
+        }
+        private int getCheckNumber()
+        {
+             counter = 1;
+
+            SqlCommand cmd = new SqlCommand(
+            "SELECT ISNULL(MAX(ChecksPerDayCounter),0) FROM Checks WHERE cast(CheckDate as DATE)= CAST(GETDATE() AS DATE)", adoClass.sqlcon);
+            
+            try
+            {
+                adoClass.sqlcon.Open();
+                counter = Convert.ToInt32(cmd.ExecuteScalar()) + 1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message)
+                    ;
+
+            }
+            finally
+            {
+                adoClass.sqlcon.Close();
+
+            }
+
+
+            return counter;
 
         }
         private void SaveDataItems(string checkID)

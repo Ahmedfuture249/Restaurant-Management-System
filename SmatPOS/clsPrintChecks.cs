@@ -9,6 +9,8 @@ using SmatPOS.Tools;
 using SmatPOS.Forms;
 using Microsoft.Reporting.WinForms;
 using System.Windows.Forms;
+using System.Diagnostics.Metrics;
+using System.Reflection.Emit;
 namespace SmatPOS
 {
     
@@ -18,8 +20,9 @@ namespace SmatPOS
         private SqlDataReader dr;
         private SqlDataAdapter dataAdapter;
         private DataTable dt;
+         
 
-        public void printCheck(int CheckID)
+        public void printCheck(int CheckID, int counter)
         {
 
             cmd = new SqlCommand("SELECT * FROM viewChecks WHERE ID = @CheckID", adoClass.sqlcon);
@@ -40,6 +43,7 @@ namespace SmatPOS
                     dro["ItemPrice"] = dr["Price"];
                     dro["ItemTotalPrice"] = dr["TotalPrice"];
                     dro["ItemID"] = dr["ItemID"];
+                    dro["ChecksPerDayCounter"] = dr["ChecksPerDayCounter"];
                     checks.Tables["dtCheck"].Rows.Add(dro);
 
                 }
@@ -63,10 +67,10 @@ namespace SmatPOS
             frm.MainReport.LocalReport.ReportEmbeddedResource = "SmatPOS.Report1.rdlc";
             frm.MainReport.LocalReport.DataSources.Clear();
             frm.MainReport.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", checks.Tables["dtCheck"]));
-            ReportParameter[] rb = new ReportParameter[4];
-            //rb[0]=new ReportParameter("Line1", declarations.systemOptions["ReceiptLine1"].ToString());
+            ReportParameter[] rb = new ReportParameter[2];
+            rb[0] = new ReportParameter("ChecksPerDayCounter", counter.ToString()) ;
             //rb[1] = new ReportParameter("Line2", declarations.systemOptions["ReceiptLine2"].ToString());
-           // rb[2] = new ReportParameter("RestarauntName", declarations.systemOptions["RestaruntName"].ToString());
+          rb[1] = new ReportParameter("restname", declarations.systemOptions["RestaruntName"].ToString());
            // byte[] imagebytes = (byte[])declarations.systemOptions["logo"];
           //  rb[3] = new ReportParameter("image", Convert.ToBase64String(imagebytes));
             LocalReport report = new LocalReport();
@@ -74,12 +78,12 @@ namespace SmatPOS
             report.ReportPath = path;
             report.DataSources.Clear();
             report.DataSources.Add(new ReportDataSource("DataSet1", checks.Tables["dtCheck"]));
-           // report.SetParameters(rb);
+           report.SetParameters(rb);
             PrinterClass.PrintToPrinter(report);    
             //frm.MainReport.LocalReport.SetParameters(rb);
             //frm.ShowDialog();
         }
-        public void printorderCheck(int CheckID)
+        public void printorderCheck(int CheckID, int counter)
         {
 
             cmd = new SqlCommand("SELECT * FROM viewChecks WHERE ID = @CheckID", adoClass.sqlcon);
@@ -123,10 +127,11 @@ namespace SmatPOS
             frm.MainReport.LocalReport.ReportEmbeddedResource = "SmatPOS.check2.rdlc";
             frm.MainReport.LocalReport.DataSources.Clear();
             frm.MainReport.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", checks.Tables["dtCheck"]));
-            ReportParameter[] rb = new ReportParameter[4];
+            ReportParameter[] rb = new ReportParameter[2];
+            rb[0] = new ReportParameter("ChecksPerDayCounter", counter.ToString());
             //rb[0]=new ReportParameter("Line1", declarations.systemOptions["ReceiptLine1"].ToString());
             //rb[1] = new ReportParameter("Line2", declarations.systemOptions["ReceiptLine2"].ToString());
-            // rb[2] = new ReportParameter("RestarauntName", declarations.systemOptions["RestaruntName"].ToString());
+             rb[1] = new ReportParameter("restname", declarations.systemOptions["RestaruntName"].ToString());
             // byte[] imagebytes = (byte[])declarations.systemOptions["logo"];
             //  rb[3] = new ReportParameter("image", Convert.ToBase64String(imagebytes));
             LocalReport report = new LocalReport();
@@ -134,7 +139,70 @@ namespace SmatPOS
             report.ReportPath = path;
             report.DataSources.Clear();
             report.DataSources.Add(new ReportDataSource("DataSet1", checks.Tables["dtCheck"]));
-            // report.SetParameters(rb);
+             report.SetParameters(rb);
+            PrinterClass.PrintToPrinter(report);
+            //frm.MainReport.LocalReport.SetParameters(rb);
+            //frm.ShowDialog();
+        }
+        public void printCheckForBigRest(int CheckID, int counter,string TapleNo)
+        {
+
+            cmd = new SqlCommand("SELECT * FROM viewChecks WHERE ID = @CheckID", adoClass.sqlcon);
+            cmd.Parameters.AddWithValue("@CheckID", CheckID);
+            dsChecks checks = new dsChecks();
+            try
+            {
+                if (adoClass.sqlcon.State != ConnectionState.Open) adoClass.sqlcon.Open();
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    DataRow dro = checks.Tables["dtCheck"].NewRow();
+                    dro["ID"] = dr["ID"];
+                    dro["CheckDate"] = dr["CheckDate"];
+                    dro["CheckTotal"] = dr["TotalCheck"];
+                    dro["ItemName"] = dr["Description"];
+                    dro["ItemQTY"] = dr["Quantity"];
+                    dro["ItemPrice"] = dr["Price"];
+                    dro["ItemTotalPrice"] = dr["TotalPrice"];
+                    dro["ItemID"] = dr["ItemID"];
+                    checks.Tables["dtCheck"].Rows.Add(dro);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred while printing the check: " + ex.Message);
+            }
+            finally
+            {
+                if (dr != null && !dr.IsClosed)
+                {
+                    dr.Close();
+                }
+                if (adoClass.sqlcon.State == ConnectionState.Open)
+                {
+                    adoClass.sqlcon.Close();
+                }
+            }
+            FormReports frm = new FormReports();
+            frm.MainReport.LocalReport.ReportEmbeddedResource = "SmatPOS.rptCheck.rdlc";
+            frm.MainReport.LocalReport.DataSources.Clear();
+            frm.MainReport.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", checks.Tables["dtCheck"]));
+            ReportParameter[] rb = new ReportParameter[7];
+            rb[0] = new ReportParameter("ChecksPerDayCounter", counter.ToString());
+            rb[1] = new ReportParameter("Line1", declarations.systemOptions["ReceiptLine1"].ToString());
+            rb[2] = new ReportParameter("Line2", declarations.systemOptions["ReceiptLine2"].ToString());
+            rb[3] = new ReportParameter("RestarauntName", declarations.systemOptions["RestaruntName"].ToString());
+            rb[4] = new ReportParameter("restaddress", declarations.systemOptions["RestaruntAddress1"].ToString());
+            rb[5] = new ReportParameter("TapleNo", TapleNo.ToString());
+            byte[] imagebytes = (byte[])declarations.systemOptions["logo"];
+            rb[6] = new ReportParameter("image", Convert.ToBase64String(imagebytes));
+            LocalReport report = new LocalReport();
+            string path = Application.StartupPath + @"\Reports\rptCheck.rdlc";
+            report.ReportPath = path;
+            report.DataSources.Clear();
+            report.DataSources.Add(new ReportDataSource("DataSet1", checks.Tables["dtCheck"]));
+            report.SetParameters(rb);
             PrinterClass.PrintToPrinter(report);
             //frm.MainReport.LocalReport.SetParameters(rb);
             //frm.ShowDialog();
@@ -155,7 +223,7 @@ namespace SmatPOS
                 MessageBox.Show("error!!");
             }
             FormReports frm = new FormReports();
-            frm.MainReport.LocalReport.ReportEmbeddedResource = "SmatPOS.rptchecksales.rdlc";
+            frm.MainReport.LocalReport.ReportEmbeddedResource = "SmatPOS.Reports.rptchecksales.rdlc";
             frm.MainReport.LocalReport.DataSources.Clear();
             frm.MainReport.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", report.Tables["ViewSaleChecks"]));
             ReportParameter[] rb = new ReportParameter[4];

@@ -295,6 +295,8 @@ namespace SmatPOS.Tools {
             
             private global::System.Data.DataColumn columnItemTotalPrice;
             
+            private global::System.Data.DataColumn columnChecksPerDayCounter;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public dtCheckDataTable() {
@@ -394,6 +396,14 @@ namespace SmatPOS.Tools {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ChecksPerDayCounterColumn {
+                get {
+                    return this.columnChecksPerDayCounter;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -429,7 +439,7 @@ namespace SmatPOS.Tools {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public dtCheckRow AdddtCheckRow(long ID, System.DateTime CheckDate, double CheckTotal, long ItemID, string ItemName, double ItemQTY, double ItemPrice, double ItemTotalPrice) {
+            public dtCheckRow AdddtCheckRow(long ID, System.DateTime CheckDate, double CheckTotal, long ItemID, string ItemName, double ItemQTY, double ItemPrice, double ItemTotalPrice, string ChecksPerDayCounter) {
                 dtCheckRow rowdtCheckRow = ((dtCheckRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
@@ -439,7 +449,8 @@ namespace SmatPOS.Tools {
                         ItemName,
                         ItemQTY,
                         ItemPrice,
-                        ItemTotalPrice};
+                        ItemTotalPrice,
+                        ChecksPerDayCounter};
                 rowdtCheckRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowdtCheckRow);
                 return rowdtCheckRow;
@@ -470,6 +481,7 @@ namespace SmatPOS.Tools {
                 this.columnItemQTY = base.Columns["ItemQTY"];
                 this.columnItemPrice = base.Columns["ItemPrice"];
                 this.columnItemTotalPrice = base.Columns["ItemTotalPrice"];
+                this.columnChecksPerDayCounter = base.Columns["ChecksPerDayCounter"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -491,6 +503,8 @@ namespace SmatPOS.Tools {
                 base.Columns.Add(this.columnItemPrice);
                 this.columnItemTotalPrice = new global::System.Data.DataColumn("ItemTotalPrice", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnItemTotalPrice);
+                this.columnChecksPerDayCounter = new global::System.Data.DataColumn("ChecksPerDayCounter", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnChecksPerDayCounter);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -761,6 +775,22 @@ namespace SmatPOS.Tools {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string ChecksPerDayCounter {
+                get {
+                    try {
+                        return ((string)(this[this.tabledtCheck.ChecksPerDayCounterColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ChecksPerDayCounter\' in table \'dtCheck\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledtCheck.ChecksPerDayCounterColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsIDNull() {
                 return this.IsNull(this.tabledtCheck.IDColumn);
             }
@@ -853,6 +883,18 @@ namespace SmatPOS.Tools {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetItemTotalPriceNull() {
                 this[this.tabledtCheck.ItemTotalPriceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsChecksPerDayCounterNull() {
+                return this.IsNull(this.tabledtCheck.ChecksPerDayCounterColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetChecksPerDayCounterNull() {
+                this[this.tabledtCheck.ChecksPerDayCounterColumn] = global::System.Convert.DBNull;
             }
         }
         

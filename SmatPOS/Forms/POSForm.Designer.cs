@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtItemQTY = new System.Windows.Forms.TextBox();
             this.buttonC = new System.Windows.Forms.Button();
@@ -75,6 +75,8 @@
             this.colQTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colItemprice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtTapleNo = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -84,7 +86,11 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.txtTapleNo);
             this.panel1.Controls.Add(this.txtItemQTY);
             this.panel1.Controls.Add(this.buttonC);
             this.panel1.Controls.Add(this.buttonDOT);
@@ -234,6 +240,8 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.txtTotal);
@@ -263,6 +271,8 @@
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.comboBox1);
             this.panel3.Controls.Add(this.label2);
@@ -344,6 +354,7 @@
             // btncancel
             // 
             this.btncancel.AccessibleName = "cancel";
+            this.btncancel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btncancel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncancel.Image = global::SmatPOS.Properties.Resources.cancel;
             this.btncancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -358,6 +369,7 @@
             // btnPay
             // 
             this.btnPay.AccessibleName = "Pay";
+            this.btnPay.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnPay.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPay.Image = global::SmatPOS.Properties.Resources.money1;
             this.btnPay.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -373,6 +385,7 @@
             // btnExit
             // 
             this.btnExit.AccessibleName = "Exit";
+            this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnExit.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Image = global::SmatPOS.Properties.Resources.log_out1;
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -388,6 +401,7 @@
             // btnPrint
             // 
             this.btnPrint.AccessibleName = "Print";
+            this.btnPrint.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnPrint.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.Image = global::SmatPOS.Properties.Resources.pos;
             this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -403,6 +417,7 @@
             // btnRemove
             // 
             this.btnRemove.AccessibleName = "Remove";
+            this.btnRemove.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnRemove.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemove.Image = global::SmatPOS.Properties.Resources.delete;
             this.btnRemove.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -418,6 +433,7 @@
             // btnClear
             // 
             this.btnClear.AccessibleName = "Clear";
+            this.btnClear.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnClear.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.Image = global::SmatPOS.Properties.Resources.trash_can;
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -432,6 +448,9 @@
             // 
             // pnlItems
             // 
+            this.pnlItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlItems.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlItems.Controls.Add(this.button17);
             this.pnlItems.Controls.Add(this.button16);
@@ -532,14 +551,14 @@
             this.dgvItems.AllowUserToAddRows = false;
             this.dgvItems.AllowUserToDeleteRows = false;
             this.dgvItems.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvItems.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvItems.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColID,
@@ -547,14 +566,14 @@
             this.colQTY,
             this.ColPrice,
             this.colItemprice});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvItems.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvItems.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvItems.Location = new System.Drawing.Point(12, 6);
             this.dgvItems.Name = "dgvItems";
             this.dgvItems.ReadOnly = true;
@@ -606,6 +625,25 @@
             this.colItemprice.Visible = false;
             this.colItemprice.Width = 125;
             // 
+            // label5
+            // 
+            this.label5.AccessibleName = "Total";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(119, 466);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(137, 28);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "رقم الطاولة";
+            // 
+            // txtTapleNo
+            // 
+            this.txtTapleNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTapleNo.Location = new System.Drawing.Point(68, 513);
+            this.txtTapleNo.Name = "txtTapleNo";
+            this.txtTapleNo.Size = new System.Drawing.Size(208, 34);
+            this.txtTapleNo.TabIndex = 13;
+            // 
             // POSForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -621,6 +659,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "POSForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.POSForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -681,5 +720,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colQTY;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn colItemprice;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtTapleNo;
     }
 }
