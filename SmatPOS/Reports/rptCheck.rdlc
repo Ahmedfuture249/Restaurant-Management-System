@@ -491,7 +491,7 @@
                       </TextRun>
                     </TextRuns>
                     <Style>
-                      <TextAlign>Center</TextAlign>
+                      <TextAlign>Left</TextAlign>
                     </Style>
                   </Paragraph>
                 </Paragraphs>
@@ -527,9 +527,9 @@
                 </Paragraphs>
                 <rd:DefaultName>restaddress</rd:DefaultName>
                 <Top>0.22304in</Top>
-                <Left>1.65085in</Left>
+                <Left>1.24252in</Left>
                 <Height>0.25in</Height>
-                <Width>1.04082in</Width>
+                <Width>1.44915in</Width>
                 <ZIndex>2</ZIndex>
                 <Style>
                   <Border>
@@ -710,7 +710,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Line1</rd:DefaultName>
-            <Top>2.06333in</Top>
+            <Top>2.43833in</Top>
             <Left>0.87167in</Left>
             <Height>0.25in</Height>
             <Width>1in</Width>
@@ -735,6 +735,7 @@
                     <Value>=Parameters!Line2.Value</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
+                      <FontFamily />
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -744,7 +745,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Line2</rd:DefaultName>
-            <Top>2.37167in</Top>
+            <Top>2.74667in</Top>
             <Left>0.88in</Left>
             <Height>0.25in</Height>
             <Width>1in</Width>
@@ -791,8 +792,39 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
+          <Textbox Name="Textbox66">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>        طريقة الدفع: بننكك              الويتر : احمد علي     </Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox66</rd:DefaultName>
+            <Top>2.09667in</Top>
+            <Height>0.25in</Height>
+            <Width>2.68in</Width>
+            <ZIndex>6</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>2.74667in</Height>
+        <Height>3.08833in</Height>
         <Style />
       </Body>
       <Width>2.78472in</Width>

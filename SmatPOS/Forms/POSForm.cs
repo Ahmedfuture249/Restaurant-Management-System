@@ -139,7 +139,7 @@ namespace SmatPOS.Forms
 
                     pnlItems.Controls.Add(catbtn);
                     x += 101;
-                    if (count == 7)
+                    if (count == 10)
                     {
                         y += 101;
                         x = 1;
@@ -219,12 +219,13 @@ namespace SmatPOS.Forms
                     catbtn.BackgroundImage = clsHelper.ByteToImage(dataRows[i]["ItemImage"]);
                     catbtn.BackgroundImageLayout = ImageLayout.Zoom;
                     catbtn.Size = new Size(100, 100);
+                    catbtn.Font = new Font(catbtn.Font.FontFamily, 14);
                     catbtn.Location = new Point(x, y);
                     catbtn.Click += cBtn_Click;
 
                     pnlItems.Controls.Add(catbtn);
                     x += 101;
-                    if (count == 7)
+                    if (count == 10)
                     {
                         y += 101;
                         x = 1;
