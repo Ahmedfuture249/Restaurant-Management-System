@@ -286,7 +286,7 @@ namespace SmatPOS
                 MessageBox.Show("error!!");
             }
             FormReports frm = new FormReports();
-            frm.MainReport.LocalReport.ReportEmbeddedResource = "SmatPOS.rptsalesbyitem.rdlc";
+            frm.MainReport.LocalReport.ReportEmbeddedResource = "SmatPOS.Reports.rptsalesbyitem.rdlc";
             frm.MainReport.LocalReport.DataSources.Clear();
             frm.MainReport.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", report.Tables["ViewSalesbyitem"]));
             ReportParameter[] rb = new ReportParameter[4];

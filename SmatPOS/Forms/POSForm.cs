@@ -69,9 +69,9 @@ namespace SmatPOS.Forms
             else
             { 
             clsPrintChecks checks = new clsPrintChecks();
-                //checks.printCheck(int.Parse(checkID), counter);
-                //checks.printorderCheck(int.Parse(checkID), counter);
-                checks.printCheckForBigRest(int.Parse(checkID), counter,TapleNo);
+                checks.printCheck(int.Parse(checkID), counter);
+                checks.printorderCheck(int.Parse(checkID), counter);
+                checks.printCheckForBigRest(int.Parse(checkID), counter, TapleNo);
             }
             txtItemQTY.Text = "0";
             dgvItems.Rows.Clear();
@@ -82,7 +82,7 @@ namespace SmatPOS.Forms
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -97,7 +97,8 @@ namespace SmatPOS.Forms
       
         private void POSForm_Load(object sender, EventArgs e)
         {
-           
+            pnlItems.Controls.Clear();
+
             SwitchLangouge langouge = new SwitchLangouge(declarations.Lang, typeof(MainForm));
             langouge.SetLangouge(this.Controls);
             clsHelper.fillComboBox(comboBox1, "select * from Payments");
@@ -125,7 +126,7 @@ namespace SmatPOS.Forms
                 adapter.Fill(_ItemDt);
                 DataRow[] dataRows = _ItemDt.Select();
                 int x = 1; int y = 1; int count = 1;
-                pnlItems.Controls.Clear();
+                panel4.Controls.Clear();
                 for (int i = 0; i <= dataRows.Length - 1; i++)
                 {
                     Button catbtn = new Button();
@@ -133,15 +134,17 @@ namespace SmatPOS.Forms
                     catbtn.AccessibleDescription = dataRows[i]["ID"].ToString();
                     catbtn.Name = "btncat" + dataRows[i]["ID"].ToString();
                     catbtn.Text = dataRows[i]["Description"].ToString();
-                    catbtn.Size = new Size(100, 100);
+                    catbtn.Size = new Size(119, 71); 
                     catbtn.Location = new Point(x, y);
+                    catbtn.Font = new Font(catbtn.Font.FontFamily, 14);
+
                     catbtn.Click += cBtn_Click;
 
-                    pnlItems.Controls.Add(catbtn);
-                    x += 101;
-                    if (count == 10)
+                    panel4.Controls.Add(catbtn);
+                    x += 120;
+                    if (count == 1)
                     {
-                        y += 101;
+                        y += 72;
                         x = 1;
                         count = 1;
                     }
@@ -225,7 +228,7 @@ namespace SmatPOS.Forms
 
                     pnlItems.Controls.Add(catbtn);
                     x += 101;
-                    if (count == 10)
+                    if (count == 7)
                     {
                         y += 101;
                         x = 1;

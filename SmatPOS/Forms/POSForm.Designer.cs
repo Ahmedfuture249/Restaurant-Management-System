@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtTapleNo = new System.Windows.Forms.TextBox();
             this.txtItemQTY = new System.Windows.Forms.TextBox();
             this.buttonC = new System.Windows.Forms.Button();
             this.buttonDOT = new System.Windows.Forms.Button();
@@ -75,13 +77,13 @@
             this.colQTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colItemprice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtTapleNo = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlItems.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -105,10 +107,29 @@
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(1142, 6);
+            this.panel1.Location = new System.Drawing.Point(1065, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(304, 579);
+            this.panel1.Size = new System.Drawing.Size(381, 579);
             this.panel1.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.AccessibleName = "TapleNumber";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(119, 466);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(137, 28);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "رقم الطاولة";
+            // 
+            // txtTapleNo
+            // 
+            this.txtTapleNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTapleNo.Location = new System.Drawing.Point(68, 513);
+            this.txtTapleNo.Name = "txtTapleNo";
+            this.txtTapleNo.Size = new System.Drawing.Size(208, 34);
+            this.txtTapleNo.TabIndex = 13;
             // 
             // txtItemQTY
             // 
@@ -122,7 +143,7 @@
             // buttonC
             // 
             this.buttonC.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonC.Location = new System.Drawing.Point(205, 354);
+            this.buttonC.Location = new System.Drawing.Point(200, 354);
             this.buttonC.Name = "buttonC";
             this.buttonC.Size = new System.Drawing.Size(90, 90);
             this.buttonC.TabIndex = 11;
@@ -132,7 +153,7 @@
             // buttonDOT
             // 
             this.buttonDOT.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDOT.Location = new System.Drawing.Point(109, 354);
+            this.buttonDOT.Location = new System.Drawing.Point(104, 354);
             this.buttonDOT.Name = "buttonDOT";
             this.buttonDOT.Size = new System.Drawing.Size(90, 90);
             this.buttonDOT.TabIndex = 10;
@@ -142,7 +163,7 @@
             // button0
             // 
             this.button0.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button0.Location = new System.Drawing.Point(13, 354);
+            this.button0.Location = new System.Drawing.Point(8, 354);
             this.button0.Name = "button0";
             this.button0.Size = new System.Drawing.Size(90, 90);
             this.button0.TabIndex = 9;
@@ -152,7 +173,7 @@
             // button9
             // 
             this.button9.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(205, 66);
+            this.button9.Location = new System.Drawing.Point(200, 66);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(90, 90);
             this.button9.TabIndex = 8;
@@ -162,7 +183,7 @@
             // button8
             // 
             this.button8.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(109, 66);
+            this.button8.Location = new System.Drawing.Point(104, 66);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(90, 90);
             this.button8.TabIndex = 7;
@@ -172,7 +193,7 @@
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(13, 66);
+            this.button7.Location = new System.Drawing.Point(8, 66);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(90, 90);
             this.button7.TabIndex = 6;
@@ -182,7 +203,7 @@
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(205, 162);
+            this.button6.Location = new System.Drawing.Point(200, 162);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(90, 90);
             this.button6.TabIndex = 5;
@@ -192,7 +213,7 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(109, 162);
+            this.button5.Location = new System.Drawing.Point(104, 162);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(90, 90);
             this.button5.TabIndex = 4;
@@ -202,7 +223,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(13, 162);
+            this.button4.Location = new System.Drawing.Point(8, 162);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(90, 90);
             this.button4.TabIndex = 3;
@@ -212,7 +233,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(205, 258);
+            this.button3.Location = new System.Drawing.Point(200, 258);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(90, 90);
             this.button3.TabIndex = 2;
@@ -222,7 +243,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(109, 258);
+            this.button2.Location = new System.Drawing.Point(104, 258);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(90, 90);
             this.button2.TabIndex = 1;
@@ -232,7 +253,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(13, 258);
+            this.button1.Location = new System.Drawing.Point(8, 258);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(90, 90);
             this.button1.TabIndex = 0;
@@ -361,7 +382,7 @@
             this.btncancel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncancel.Image = global::SmatPOS.Properties.Resources.cancel;
             this.btncancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btncancel.Location = new System.Drawing.Point(904, 43);
+            this.btncancel.Location = new System.Drawing.Point(809, 28);
             this.btncancel.Name = "btncancel";
             this.btncancel.Size = new System.Drawing.Size(149, 57);
             this.btncancel.TabIndex = 18;
@@ -376,7 +397,7 @@
             this.btnPay.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPay.Image = global::SmatPOS.Properties.Resources.money1;
             this.btnPay.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPay.Location = new System.Drawing.Point(554, 43);
+            this.btnPay.Location = new System.Drawing.Point(459, 28);
             this.btnPay.Name = "btnPay";
             this.btnPay.Size = new System.Drawing.Size(149, 57);
             this.btnPay.TabIndex = 13;
@@ -392,7 +413,7 @@
             this.btnExit.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Image = global::SmatPOS.Properties.Resources.log_out1;
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExit.Location = new System.Drawing.Point(904, 112);
+            this.btnExit.Location = new System.Drawing.Point(809, 97);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(149, 57);
             this.btnExit.TabIndex = 16;
@@ -408,7 +429,7 @@
             this.btnPrint.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.Image = global::SmatPOS.Properties.Resources.pos;
             this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPrint.Location = new System.Drawing.Point(554, 113);
+            this.btnPrint.Location = new System.Drawing.Point(459, 98);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(149, 57);
             this.btnPrint.TabIndex = 15;
@@ -424,7 +445,7 @@
             this.btnRemove.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemove.Image = global::SmatPOS.Properties.Resources.delete;
             this.btnRemove.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRemove.Location = new System.Drawing.Point(728, 43);
+            this.btnRemove.Location = new System.Drawing.Point(633, 28);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(149, 57);
             this.btnRemove.TabIndex = 14;
@@ -440,7 +461,7 @@
             this.btnClear.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.Image = global::SmatPOS.Properties.Resources.trash_can;
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnClear.Location = new System.Drawing.Point(728, 113);
+            this.btnClear.Location = new System.Drawing.Point(633, 98);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(149, 57);
             this.btnClear.TabIndex = 17;
@@ -454,7 +475,7 @@
             this.pnlItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlItems.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pnlItems.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.pnlItems.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlItems.Controls.Add(this.button17);
             this.pnlItems.Controls.Add(this.button16);
@@ -462,11 +483,10 @@
             this.pnlItems.Controls.Add(this.button14);
             this.pnlItems.Controls.Add(this.button13);
             this.pnlItems.Controls.Add(this.button12);
-            this.pnlItems.Controls.Add(this.button11);
             this.pnlItems.Controls.Add(this.button10);
             this.pnlItems.Location = new System.Drawing.Point(381, 6);
             this.pnlItems.Name = "pnlItems";
-            this.pnlItems.Size = new System.Drawing.Size(755, 579);
+            this.pnlItems.Size = new System.Drawing.Size(528, 579);
             this.pnlItems.TabIndex = 2;
             this.pnlItems.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlItems_Paint);
             // 
@@ -533,9 +553,9 @@
             // button11
             // 
             this.button11.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(325, 237);
+            this.button11.Location = new System.Drawing.Point(3, 6);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(100, 100);
+            this.button11.Size = new System.Drawing.Size(119, 71);
             this.button11.TabIndex = 14;
             this.button11.Text = "7";
             this.button11.UseVisualStyleBackColor = true;
@@ -554,15 +574,15 @@
             // 
             this.dgvItems.AllowUserToAddRows = false;
             this.dgvItems.AllowUserToDeleteRows = false;
-            this.dgvItems.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvItems.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            this.dgvItems.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvItems.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColID,
@@ -570,14 +590,14 @@
             this.colQTY,
             this.ColPrice,
             this.colItemprice});
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvItems.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvItems.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgvItems.Location = new System.Drawing.Point(12, 6);
             this.dgvItems.Name = "dgvItems";
             this.dgvItems.ReadOnly = true;
@@ -629,31 +649,24 @@
             this.colItemprice.Visible = false;
             this.colItemprice.Width = 125;
             // 
-            // label5
+            // panel4
             // 
-            this.label5.AccessibleName = "Total";
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(119, 466);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(137, 28);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "رقم الطاولة";
-            // 
-            // txtTapleNo
-            // 
-            this.txtTapleNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTapleNo.Location = new System.Drawing.Point(68, 513);
-            this.txtTapleNo.Name = "txtTapleNo";
-            this.txtTapleNo.Size = new System.Drawing.Size(208, 34);
-            this.txtTapleNo.TabIndex = 13;
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel4.Controls.Add(this.button11);
+            this.panel4.Location = new System.Drawing.Point(916, 6);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(143, 579);
+            this.panel4.TabIndex = 21;
             // 
             // POSForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Navy;
-            this.ClientSize = new System.Drawing.Size(1450, 780);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.dgvItems);
             this.Controls.Add(this.pnlItems);
             this.Controls.Add(this.panel3);
@@ -674,6 +687,7 @@
             this.panel3.PerformLayout();
             this.pnlItems.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).EndInit();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -727,5 +741,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colItemprice;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtTapleNo;
+        private System.Windows.Forms.Panel panel4;
     }
 }

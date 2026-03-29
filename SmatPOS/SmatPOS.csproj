@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>restaurant.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Azure.Core, Version=1.50.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
       <HintPath>packages\Azure.Core.1.50.0\lib\net472\Azure.Core.dll</HintPath>
@@ -553,6 +556,7 @@
     <None Include="Resources\shield.png" />
     <None Include="Resources\check.png" />
     <None Include="Resources\cross.png" />
+    <Content Include="restaurant.ico" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

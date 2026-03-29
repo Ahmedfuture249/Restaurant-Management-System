@@ -297,6 +297,8 @@
             // 
             // pnlMainForm
             // 
+            this.pnlMainForm.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pnlMainForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pnlMainForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMainForm.Location = new System.Drawing.Point(261, 102);
             this.pnlMainForm.Name = "pnlMainForm";
